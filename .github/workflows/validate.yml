@@ -31,6 +31,8 @@ jobs:
         run: ruff check --output-format=github .
       - name: Unit, schema and contract tests
         run: python -m pytest -q
+      - name: Real-wrapper secret scanner regression tests
+        run: bash scripts/ci/test_secret_scan.sh
       - name: Snakemake dry run
         run: snakemake --dry-run --cores 1
 
