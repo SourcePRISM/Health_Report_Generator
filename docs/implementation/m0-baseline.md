@@ -277,3 +277,87 @@ by these corrective checks.
 Changes remain subject to staged/committed-content review, hosted checks,
 independent human review and explicit publication/merge gates.
 M0 remains not achieved. The frozen baseline and release are unchanged.
+
+## Integration CI execution checkpoint: 2026-10-24
+
+This checkpoint supplements the earlier inspection and diagnostic history.
+Earlier not-executed statements describe their respective checkpoints.
+M0 remains not achieved.
+
+### Merged correction and local identity
+
+PR #4 merged the scanner correction into fix/m0-python-runner at
+d3c93ce7ccae7d08f8f33d8150b550384b55475b.
+PR #3 then merged the combined correction into integration/jev-free-product
+at 90495b67d07333a22211a696f50b2531df61fa3c.
+
+The integration commit contains the reviewed runner/scanner head and has
+tree 3d68582552df719a4decfaaa27f8af21a24359fb, matching the previously tested
+combined correction. Local post-merge validation of d3c93ce returned
+154 tests passed in 20.15 seconds and successful full-project Ruff checks.
+A separate clean detached worktree was created at the integration commit;
+the evidence and runner worktrees were preserved.
+
+### Hosted execution and revision attribution
+
+Corrective PR run 40134158847 reported head
+d3c93ce7ccae7d08f8f33d8150b550384b55475b but actually checked out GitHub's
+pull/3/merge revision fb4b54ee3563bb460337c79a72688cbb274e2d22.
+Checkout logs explicitly identify that test merge. Its artifact name
+matches that checked-out revision, not the reported PR head.
+
+The supplied PR-run step results showed successful lint, unit/schema/
+contract tests, real-wrapper scanner regressions and a Snakemake dry run.
+The full build and verification steps succeeded. Inspected log excerpts
+confirmed Shiny server checks, dashboard data-label/ggplot2 checks and an
+incremental no-op. Container logs showed completion of all 17 pipeline
+steps, audience/provenance verification, release-hash/rendered-link
+verification, application smoke checks and an incremental no-op.
+
+Integration push run 40135216053 reported head
+90495b67d07333a22211a696f50b2531df61fa3c and completed successfully.
+All four jobs (fast, secrets, full and container) and all listed steps
+returned success, including hosted and container all-audience builds,
+output/provenance checks, release verification, application smoke tests
+and the hosted no-op rebuild. These integration-run observations come
+from run/step metadata; its complete job logs were not inspected here.
+
+### Artifact evidence and limits
+
+PR-run artifact:
+- ID: 12575847851.
+- Name: health-report-fb4b54ee3563bb460337c79a72688cbb274e2d22.
+- Upload log: 276 files, archive size 7317615 bytes.
+- Reported archive SHA-256:
+  d8d37db37d2dac3dae8587eca0287d17763ec858b751e907e47fdca5bb06789f.
+
+Integration-run artifact:
+- ID: 12576732977.
+- Name: health-report-90495b67d07333a22211a696f50b2531df61fa3c.
+- Metadata: not expired at inspection; archive size 7317587 bytes.
+- Reported archive SHA-256:
+  4210597ad9e1e0efc98934a9c3b0002a3ef0ab9d850978c2607ab9c9abb6b20a.
+
+These are reported archive digests, not independently recomputed local
+digests or numerical-result hashes. The archives were not downloaded,
+unpacked or compared in this checkpoint. Their differing digests are
+not assigned a cause and do not establish numerical equivalence or failure.
+
+### Remaining acceptance
+
+Successful hosted builds and automated output checks are now evidenced;
+the earlier absence of hosted execution evidence no longer describes
+this corrective integration checkpoint.
+
+Still outstanding are explicit historical-baseline numerical comparison
+with recorded inputs, snapshot identities and expected/actual results;
+independent artifact/provenance inspection; browser-based acceptance of
+the supported audience journeys; remaining applicable M0 security and
+concurrency checks; and independent human review.
+
+The ancestry-scoped secrets gate is not a replacement for the separate
+branch/tag history audit. The audit's weekly schedule is not active
+default-branch coverage while present only on the integration branch.
+
+No M0 completion, M1 approval, promotion to main, protection change or
+frozen-release modification is established by this checkpoint.
