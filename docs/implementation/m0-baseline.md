@@ -361,3 +361,160 @@ default-branch coverage while present only on the integration branch.
 
 No M0 completion, M1 approval, promotion to main, protection change or
 frozen-release modification is established by this checkpoint.
+
+## Reproduction and manual acceptance checkpoint: 2026-10-25
+
+This section supplements the earlier chronological observations. It records
+later execution evidence and user-reported manual checks without rewriting
+the earlier inspection history. M0 has not been declared complete.
+
+### Merged integration and hosted checks
+
+PR #2 merged the evidence into integration/jev-free-product at
+47de6ab1e15c98b1efc18c33f26ffb4481342862.
+Its tree was verified as
+4ee65fb7dea46ffafb537663eb80adeafd0c3c86.
+
+Integration push run 40137364011 completed successfully for that exact
+head. All four jobs (fast, secrets, full and container) returned success.
+This final checkpoint was supplied as run/job metadata; it is not a claim
+that every complete log and artifact from this run was independently read.
+
+The preceding evidence-head runs 40136574569 and 40136577943 also returned
+success for all four jobs. Their results remain distinct from the merged
+integration run.
+
+### Independent artifact and snapshot verification
+
+Artifact 12576732977 belongs to earlier integration run 40135216053 at
+90495b67d07333a22211a696f50b2531df61fa3c, not the later evidence merge.
+
+The downloaded archive was independently hashed and matched SHA-256
+4210597ad9e1e0efc98934a9c3b0002a3ef0ab9d850978c2607ab9c9abb6b20a.
+It contained 276 file entries and 61703385 uncompressed bytes.
+All 106 file hashes listed in release.json were independently recomputed
+and matched. This statement covers the release-listed files, not a claim
+that the release manifest lists every archive entry.
+
+The frozen snapshot identity was
+d0709708a8057815801497701bfaa145017979f1ecace4508ae46237438573ee,
+with 168 snapshot file records. Snapshot verification was exercised by
+the archived-input pipeline builds. No live data acquisition was run.
+
+### Fresh historical-baseline numerical comparison
+
+Separate detached worktrees were used for:
+- Historical baseline: aaa51f53dc1616de6db9571427c9528d107105cb.
+- Current integration: 47de6ab1e15c98b1efc18c33f26ffb4481342862.
+
+Using the existing isolated Python pipeline environment and Snakemake
+8.30.0, each revision ran the tables target into a separate fresh output
+directory using the same extracted artifact snapshot.json. Both builds
+completed all six workflow steps; this was table generation, not fresh
+local HTML/PDF rendering.
+
+For researcher, health_institution and public, the comparison covered:
+series.csv, metrics.csv, lineage.csv, selection.csv, sources.csv,
+checks.csv, snapshot.json, stakeholder.json, pathogen_class.csv and
+bundle.json.
+
+All 30 corresponding files matched byte-for-byte across the fresh
+baseline output, fresh integration output and hosted artifact.
+There were zero mismatches; no tolerance was introduced.
+
+The comparison CSV records audience, filename, baseline SHA-256,
+integration SHA-256, artifact SHA-256 and equality. Its independently
+recorded SHA-256 is
+7efeea42223ccd023db553e1302bc8a693853ab7ae0a7a45d7ef84cb9a23d8a4.
+Build logs, generated outputs and the comparison CSV remain in the local
+temporary evidence directory; they are not committed with this document.
+A checksum alone cannot recover those files: durable evidence retention
+remains to be resolved before relying on their continued availability.
+
+This establishes exact compatibility for the tested snapshot and standard
+audience configurations. It does not establish scientific validity,
+universal input coverage or equivalence of rendered document bytes.
+Matching each audience across revisions is not a claim that differently
+configured audiences have identical bundles.
+
+### User-reported browser and Shiny checks
+
+The user confirmed successful opening/rendering of report HTML, methods
+HTML and PDFs in the exercised scope. The public report's collapsed
+comparison table was located and its expansion, filtering and sorting
+were subsequently reported as passing.
+
+The inspected public HTML contained that disclosure and table controls.
+Its charts are embedded static images; hover/zoom is not implemented by
+that renderer. No such chart interaction is counted as a passed test.
+The initially difficult-to-find table disclosure is usability feedback.
+
+The user subsequently reported that the exercised packaged Shiny
+interactions worked, including the calculation-trace selection.
+This is user-reported manual evidence, not an automated browser run.
+Audience-by-audience coverage, browser version and exact viewport were
+not recorded. Do not infer that all three audience apps were individually
+tested or that this constitutes independent reviewer approval.
+
+The selected local image was
+sha256:5638b536d2c47824dbea83040ffd3f4fcd4d82abc3a09dd028ed1518c05a3bf2.
+Inspection reported R 4.3.2 and the required Shiny packages available.
+An initial literal-string comparison falsely flagged four versions
+because packageVersion prints numeric components with dots rather than
+the hyphen spellings in renv.lock. The revised preflight compares R
+package_version objects and gates application startup on version equality.
+The subsequently supplied startup output reported R 4.3.2, 48 locked
+packages checked, zero version mismatches or missing packages, and a
+successful version preflight. Shiny then reached its listening state on
+container port 8766. The launch command mapped that port to host loopback
+only. The transcript subsequently shows Ctrl-C interrupts followed by
+Execution halted; that ending is not evidence of an application crash
+during the reported browser checks.
+
+These observations establish the version preflight and successful startup,
+not complete image-build provenance or an unattended stability test.
+
+### Open rendering finding: Shiny calculation-trace overflow
+
+Status: open baseline limitation; focused M1 correction candidate.
+Functional metric selection passes at the reported scope, but visual
+table containment fails.
+
+In Methods & sources, Follow a calculation, the lineage table for
+gonorrhea · count · 2024 extends beyond the white panel. Long sha256 and
+metadata_sha256 content makes the overflow visible. A user-supplied
+screenshot confirms this example; it is not attached to this document.
+Similar overflow was reported for other wide metrics, including
+gonorrhea · population · 2022. The finding is not confined to one metric.
+
+Expected correction:
+- Contain both metric-value and lineage tables at narrow and wide widths.
+- Preserve all identifiers, hashes, formulas, inputs_json and source links.
+- Consider horizontal scrolling inside the panel; do not hide overflow
+  or destructively truncate audit values.
+- Test short-to-long metric switching and complete CSV downloads.
+- Preserve numerical values and reactive behaviour.
+- Inspect app.R and dashboard.css before selecting a minimal patch.
+- Regenerate fresh packages for regression tests; do not edit the verified
+  artifact or frozen release.
+
+No implementation or passing regression for this defect is claimed.
+Creating a GitHub issue was attempted with user approval but returned
+HTTP 410 because Issues are disabled. No issue was created and repository
+settings were not changed. This section retains the finding instead.
+
+### Acceptance boundaries and next gate
+
+The later evidence now establishes successful integration CI, independent
+artifact checks, scoped baseline numerical reproduction and user-reported
+manual interaction checks. The layout failure remains explicit.
+
+Remaining review includes evidence retention, complete audience/browser
+coverage records, applicable baseline inspection gaps and an independent
+reviewer decision. Earlier security/concurrency limitations must not be
+silently converted into claims of multi-user service acceptance.
+
+M0 closure requires an explicit acceptance decision with known limitations.
+M1 implementation requires separate milestone approval. No main promotion,
+deployment, scientific approval, protection change or frozen-release
+modification is authorised by this documentation checkpoint.
