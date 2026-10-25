@@ -3,7 +3,6 @@
 import argparse
 import json
 import os
-import shutil
 import subprocess
 import sys
 import tempfile
@@ -14,6 +13,7 @@ import analyse
 import inventory
 import request_cache as rc
 from common import write_json
+from custom_report_output import publish_cached_report
 
 ROOT = rc.ROOT
 
@@ -66,9 +66,7 @@ def build_custom(request_path, data_root, out, cache, render=snakemake_render):
             })
             entry = rc.store(cache / 'entries', key, parts, report_dir)
 
-    if out.exists():
-        shutil.rmtree(out)
-    shutil.copytree(entry, out, ignore=shutil.ignore_patterns(rc.ENTRY))
+    publish_cached_report(entry, out, key)
     return status, key, out
 
 
