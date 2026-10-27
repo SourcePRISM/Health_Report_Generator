@@ -160,3 +160,27 @@ def test_output_context_tests_are_routed_to_required_container_gate():
     assert 'continue-on-error' not in steps[index]
     assert 'if' not in steps[index]
     assert '||' not in run
+
+
+@pytest.mark.parametrize('workflow_name,job_name', [
+    ('validate.yml', 'fast'),
+    ('refresh-idd-data.yml', 'refresh'),
+])
+def test_python_only_pytest_steps_preserve_runtime_routing(workflow_name, job_name):
+    import shlex
+
+    steps = workflow(workflow_name)['jobs'][job_name]['steps']
+    selected = [step for step in steps if 'python -m pytest' in step.get('run', '')]
+    assert len(selected) == 1
+    step = selected[0]
+    args = shlex.split(step['run'])
+    assert args[:3] == ['python', '-m', 'pytest']
+    selectors = [index for index in range(3, len(args)) if args[index] == '-m']
+    assert len(selectors) == 1, 'Python-only test step must select not r_quarto'
+    assert args[selectors[0] + 1] == 'not r_quarto'
+    assert '--strict-markers' in args
+    assert not any(arg.split('=', 1)[0] in ('--ignore', '--ignore-glob', '--deselect')
+                   for arg in args)
+    assert 'continue-on-error' not in step
+    assert 'if' not in step
+    assert '||' not in step['run']

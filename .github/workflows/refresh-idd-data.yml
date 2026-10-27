@@ -42,7 +42,7 @@ jobs:
       - name: Install locked Python dependencies
         run: python -m pip install -r scripts/health_pipeline/requirements.lock.txt
       - name: Test workflow code
-        run: python -m pytest -q
+        run: python -m pytest -q --strict-markers -m "not r_quarto"
       - name: Pull the latest IDD CSV and metadata exports
         run: python -u src/sync_idd_exports.py
       - name: Build validated reports and lineage bundle
