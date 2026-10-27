@@ -1,5 +1,8 @@
 """Cache keys must change with any input that changes the report, and only then."""
+import csv
+import io
 import json
+import shutil
 import sys
 from pathlib import Path
 
@@ -85,3 +88,92 @@ def test_store_lookup_and_corruption(tmp_path):
 def test_incomplete_entry_is_a_miss(tmp_path):
     (tmp_path / "cache" / "k2").mkdir(parents=True)
     assert rc.lookup(tmp_path / "cache", "k2") is None
+
+
+CACHE_DEPENDENCY_PATHS = (
+    'scripts/health_pipeline/config/pathogen_class.csv',
+    '.Rprofile',
+    'renv.lock',
+    'Snakefile',
+)
+
+
+@pytest.fixture
+def cache_dependency_fixture(tmp_path):
+    fixture_root = tmp_path / 'dependency-root'
+    sources = set(rc.code_files(ROOT))
+    sources.update(ROOT / name for name in rc.TOOLCHAIN_FILES)
+    for source in sources:
+        destination = fixture_root / source.relative_to(ROOT)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, destination)
+    return fixture_root, write_request(tmp_path), make_snapshot(tmp_path, 'dependency')
+
+
+def mutate_cache_dependency(path):
+    original = path.read_bytes()
+    if path.suffix == '.csv':
+        reader = csv.DictReader(io.StringIO(original.decode('utf-8-sig')))
+        fields = reader.fieldnames
+        rows = list(reader)
+        assert fields is not None and 'label' in fields and rows
+        rows[0]['label'] += ' [SYNTHETIC CACHE REGRESSION]'
+        output = io.StringIO(newline='')
+        writer = csv.DictWriter(output, fieldnames=fields, lineterminator='\n')
+        writer.writeheader()
+        writer.writerows(rows)
+        changed = output.getvalue().encode()
+    elif path.suffix == '.json' or path.name == 'renv.lock':
+        value = json.loads(original)
+        value['__synthetic_cache_regression__'] = True
+        changed = (json.dumps(value, indent=2) + '\n').encode()
+    else:
+        changed = original + b'\n# SYNTHETIC CACHE REGRESSION; fixture only\n'
+    assert changed != original
+    path.write_bytes(changed)
+
+
+@pytest.mark.parametrize('dependency', CACHE_DEPENDENCY_PATHS)
+def test_declared_dependency_change_invalidates_cached_report(
+    tmp_path, cache_dependency_fixture, dependency
+):
+    fixture_root, request, snapshot = cache_dependency_fixture
+    before, before_parts = rc.request_key(request, snapshot, root=fixture_root)
+    source = tmp_path / 'synthetic-report'
+    source.mkdir()
+    (source / 'report.html').write_text('<html>SYNTHETIC CACHE REGRESSION</html>')
+    cache = tmp_path / 'cache'
+    entry = rc.store(cache, before, before_parts, source)
+    assert rc.lookup(cache, before) == entry
+
+    mutate_cache_dependency(fixture_root / dependency)
+    after, after_parts = rc.request_key(request, snapshot, root=fixture_root)
+    assert after != before
+    assert after_parts['toolchain_hash'] != before_parts['toolchain_hash']
+    assert after_parts['request'] == before_parts['request']
+    assert after_parts['snapshot_id'] == before_parts['snapshot_id']
+    assert rc.lookup(cache, after) is None
+    assert entry.is_dir() and rc.lookup(cache, before) == entry
+
+
+@pytest.mark.parametrize('dependency', CACHE_DEPENDENCY_PATHS)
+def test_missing_declared_cache_dependency_fails_closed(cache_dependency_fixture, dependency):
+    fixture_root, request, snapshot = cache_dependency_fixture
+    (fixture_root / dependency).unlink()
+    with pytest.raises(FileNotFoundError):
+        rc.request_key(request, snapshot, root=fixture_root)
+
+
+@pytest.mark.parametrize('dependency', (
+    'scripts/health_pipeline/publish.py',
+    'workflow/toolchain.json',
+    'scripts/health_pipeline/requirements.lock.txt',
+))
+def test_existing_cache_dependency_control_still_invalidates(cache_dependency_fixture, dependency):
+    fixture_root, request, snapshot = cache_dependency_fixture
+    before, before_parts = rc.request_key(request, snapshot, root=fixture_root)
+    mutate_cache_dependency(fixture_root / dependency)
+    after, after_parts = rc.request_key(request, snapshot, root=fixture_root)
+    assert after != before
+    assert after_parts['request'] == before_parts['request']
+    assert after_parts['snapshot_id'] == before_parts['snapshot_id']

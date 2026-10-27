@@ -22,6 +22,11 @@ TOOLCHAIN_FILES = [
     'workflow/r-packages.tsv',
     'scripts/health_pipeline/requirements.lock.txt',
     'scripts/health_pipeline/requirements.ui.lock.txt',
+    # Explicit workflow, startup, classification and R-library dependencies.
+    'scripts/health_pipeline/config/pathogen_class.csv',
+    '.Rprofile',
+    'renv.lock',
+    'Snakefile',
 ]
 IGNORED_TOP = {'__pycache__', 'example_output', 'config'}
 
