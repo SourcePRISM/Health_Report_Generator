@@ -8,6 +8,8 @@ import time
 from dataclasses import dataclass
 from pathlib import Path
 
+from safe_logging import emit_event
+
 
 @dataclass(frozen=True)
 class ProcessResult:
@@ -57,17 +59,23 @@ def run_supervised(argv, *, cwd, log_path, lock_fd, timeout=300, grace=1):
         os.O_WRONLY | os.O_CREAT | os.O_EXCL,
         0o600,
     )
-    with os.fdopen(fd, "wb") as log:
-        process = subprocess.Popen(
-            argv,
-            cwd=cwd,
-            stdin=subprocess.DEVNULL,
-            stdout=log,
-            stderr=subprocess.STDOUT,
-            shell=False,
-            start_new_session=True,
-            pass_fds=(lock_fd,),
-        )
+    with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as log:
+        emit_event(log, "process_launch_requested")
+        started = time.monotonic()
+        try:
+            process = subprocess.Popen(
+                argv,
+                cwd=cwd,
+                stdin=subprocess.DEVNULL,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                shell=False,
+                start_new_session=True,
+                pass_fds=(lock_fd,),
+            )
+        except OSError:
+            emit_event(log, "process_launch_failed", error_code="PROCESS_START_FAILED")
+            raise
         timed_out = False
         try:
             try:
@@ -76,6 +84,10 @@ def run_supervised(argv, *, cwd, log_path, lock_fd, timeout=300, grace=1):
                 timed_out = True
         finally:
             _cleanup_group(process, grace)
+        emit_event(
+            log, "process_finished", exit_code=process.returncode,
+            timed_out=timed_out, elapsed_ms=round((time.monotonic() - started) * 1000),
+        )
 
     return ProcessResult(
         returncode=process.returncode,

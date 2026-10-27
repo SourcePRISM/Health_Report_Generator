@@ -1,3 +1,4 @@
+import json
 import stat
 import sys
 
@@ -20,11 +21,15 @@ def run(tmp_path, code, *, timeout=5):
 
 
 def test_success_and_private_log(tmp_path):
-    result = run(tmp_path, "print('finished')")
+    result = run(tmp_path, "print('SYNTHETIC_CHILD_OUTPUT')")
     assert result.returncode == 0
     assert not result.timed_out
     log = tmp_path / "private.log"
-    assert "finished" in log.read_text()
+    records = [json.loads(line) for line in log.read_text().splitlines()]
+    assert records[0]["event"] == "process_launch_requested"
+    assert records[-1]["event"] == "process_finished"
+    assert records[-1]["exit_code"] == 0
+    assert "SYNTHETIC_CHILD_OUTPUT" not in log.read_text()
     assert stat.S_IMODE(log.stat().st_mode) == 0o600
 
 
@@ -50,7 +55,9 @@ def test_ownership_descriptor_is_passed(tmp_path):
             grace=0.1,
         )
     assert result.returncode == 0
-    assert "held" in (tmp_path / "private.log").read_text()
+    text = (tmp_path / "private.log").read_text()
+    assert "held" not in text
+    assert json.loads(text.splitlines()[-1])["exit_code"] == 0
 
 
 def test_argument_is_not_shell_interpreted(tmp_path):
@@ -66,7 +73,7 @@ def test_argument_is_not_shell_interpreted(tmp_path):
         )
     assert result.returncode == 0
     assert not marker.exists()
-    assert argument in (tmp_path / "private.log").read_text()
+    assert argument not in (tmp_path / "private.log").read_text()
 
 
 @pytest.mark.parametrize("timeout", [0, -1, float("inf"), True])
