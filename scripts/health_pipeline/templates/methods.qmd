@@ -33,7 +33,7 @@ if(knitr::is_html_output())cat(methods_html(b,prefix=params$download_prefix))
 if(knitr::is_html_output()) cat(provenance_script(), interactive_tables_script())
 if(knitr::is_latex_output()) {
   p <- presentation_profile(b)
-  cat('Audience: **',p$display_name,'**. Presentation: ',p$layout,'.\n\n',sep='')
+  cat('Audience: **',markdown_text(p$display_name),'**. Presentation: ',p$layout,'.\n\n',sep='')
   cat('## Where the findings come from\n\n')
   cat('Geography: **',b$cfg$geography,'**. Reporting period: ',paste(b$cfg$years,collapse='–'),'. Reference year: ',b$cfg$reference_year,'.\n\n',sep='')
   cat('Snapshot: `',substr(b$manifest$snapshot_id,1,16),'`. Full fingerprint is available in the companion snapshot manifest.\n\n',sep='')
@@ -61,7 +61,7 @@ if(knitr::is_latex_output()) {
   cat(trace_label, ': **',format(z,big.mark=','),'** in ',y,' versus **',format(a,big.mark=','),'** in ',ref,', a change of **',format_pct(metric_value(b,paste0(trace_subject,':reference_change')),1),'**. Each total links to disease counts and original source records in lineage.csv.\n\n',sep='')
   if(show_section(b,'excluded')) {
     cat('## Dataset selection\n\n')
-    for(i in seq_len(nrow(b$selection)))cat('- **',label_topic(b,b$selection$topic[i]),'** (',b$selection$status[i],'): ',b$selection$reason[i],'.\n',sep='')
+    for(i in seq_len(nrow(b$selection)))cat('- **',markdown_text(label_topic(b,b$selection$topic[i])),'** (',markdown_text(b$selection$status[i]),'): ',markdown_text(b$selection$reason[i]),'.\n',sep='')
     cat('\nSource: saved series-selection decisions. Disease-level inclusion does not automatically imply inclusion in a group sum.\n\n')
   }
   if(show_section(b,'quality')) {

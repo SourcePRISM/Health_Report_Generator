@@ -1,4 +1,5 @@
 """Synthetic output-preservation regressions; no Quarto or real reports."""
+import errno
 import hashlib
 import json
 import shutil
@@ -158,37 +159,78 @@ class OutputPreservationTests(unittest.TestCase):
             output.publish_cached_report(self.source, self.source.parent, KEY)
         self.assert_preserved()
 
-    def test_final_rename_failure_restores_previous_output(self):
-        real_rename = Path.rename
-        failures = []
-
-        def rename(path, target):
-            if path.name == "replacement":
-                failures.append(True)
-                raise OSError("injected handoff failure")
-            return real_rename(path, target)
-
-        with patch.object(Path, "rename", rename):
+    def test_handoff_failure_preserves_previous_output(self):
+        with patch.object(output, "_renameat2", side_effect=OSError("injected handoff failure")):
             with self.assertRaisesRegex(OSError, "injected handoff failure"):
                 self.publish()
-        self.assertEqual(len(failures), 1)
+        self.assert_preserved()
+        self.assertEqual(list(self.root.glob(".sourceprism-output-*")), [])
+
+    def test_unsupported_exchange_fails_without_fallback(self):
+        with patch.object(output, "_renameat2", side_effect=OSError(errno.EOPNOTSUPP, "unsupported")):
+            with patch.object(Path, "rename", side_effect=AssertionError("non-atomic fallback")):
+                with self.assertRaises(OSError):
+                    self.publish()
         self.assert_preserved()
 
-    def test_failed_restoration_retains_recovery_material(self):
-        real_rename = Path.rename
+    def test_existing_destination_uses_exchange(self):
+        with patch.object(output, "_renameat2", wraps=output._renameat2) as operation:
+            self.publish()
+        self.assertEqual(operation.call_args.args[2], output.RENAME_EXCHANGE)
+        self.assertEqual((self.dest / "report.html").read_text(), "NEW REPORT")
 
-        def rename(path, target):
-            if path.name in {"replacement", "previous"}:
-                raise OSError("injected rename failure")
-            return real_rename(path, target)
+    def test_first_publication_uses_noreplace(self):
+        shutil.rmtree(self.dest)
+        with patch.object(output, "_renameat2", wraps=output._renameat2) as operation:
+            self.publish()
+        self.assertEqual(operation.call_args.args[2], output.RENAME_NOREPLACE)
 
-        with patch.object(Path, "rename", rename):
-            with self.assertRaises(output.OutputRecoveryError) as caught:
+    def test_no_path_rename_handoff(self):
+        with patch.object(Path, "rename", side_effect=AssertionError("two-rename handoff")):
+            self.publish()
+        self.assertEqual((self.dest / "report.html").read_text(), "NEW REPORT")
+
+    def test_prepublication_sync_failure_preserves_previous_output(self):
+        with patch.object(output, "_sync_tree", side_effect=OSError("injected sync failure")):
+            with self.assertRaisesRegex(OSError, "injected sync failure"):
                 self.publish()
+        self.assert_preserved()
+
+    def test_post_handoff_sync_failure_retains_old_tree_and_reports_uncertainty(self):
+        real_sync = output._sync_directory
+
+        def sync(path):
+            if Path(path) == self.dest.parent and (self.dest / "report.html").read_text() == "NEW REPORT":
+                raise OSError("injected post-handoff sync failure")
+            return real_sync(path)
+
+        with patch.object(output, "_sync_directory", side_effect=sync):
+            with self.assertRaises(output.OutputPublicationUncertainError) as caught:
+                self.publish()
+        self.assertEqual(caught.exception.destination, self.dest)
         recovery = caught.exception.recovery_directory
-        self.assertEqual(snapshot(recovery / "previous"), self.before)
-        self.assertEqual((recovery / "replacement/report.html").read_text(), "NEW REPORT")
+        self.assertTrue(recovery.is_dir())
+        self.assertEqual(snapshot(recovery / "replacement"), self.before)
+        self.assertEqual((self.dest / "report.html").read_text(), "NEW REPORT")
         self.assertEqual(snapshot(self.source), self.cached)
+
+    def test_real_exchange_preserves_both_nonempty_trees(self):
+        other = self.root / "other"
+        other.mkdir()
+        (other / "report.html").write_text("OTHER REPORT")
+        output._renameat2(other, self.dest, output.RENAME_EXCHANGE)
+        self.assertEqual(snapshot(other), self.before)
+        self.assertEqual((self.dest / "report.html").read_text(), "OTHER REPORT")
+
+    def test_real_noreplace_does_not_overwrite_existing_output(self):
+        other = self.root / "other"
+        other.mkdir()
+        (other / "report.html").write_text("OTHER REPORT")
+        with self.assertRaises(OSError) as caught:
+            output._renameat2(other, self.dest, output.RENAME_NOREPLACE)
+        self.assertEqual(caught.exception.errno, errno.EEXIST)
+        self.assertEqual(snapshot(self.dest), self.before)
+        self.assertEqual((other / "report.html").read_text(), "OTHER REPORT")
 
 
 if __name__ == "__main__":

@@ -115,3 +115,48 @@ def test_verify_release_rejects_damage(tmp_path, damage, message):
         m = folder / 'methods.html'
         m.write_text(m.read_text().replace('"parameters_sha256"', '"parameters_sha256_x"'))
     assert any(message in e for e in verify(out)), verify(out)
+
+
+def test_output_context_tests_are_routed_to_required_container_gate():
+    import ast
+    import shlex
+    import tomllib
+
+    config = tomllib.loads((ROOT / 'pyproject.toml').read_text())
+    markers = config['tool']['pytest']['ini_options']['markers']
+    assert any(marker.startswith('r_quarto:') for marker in markers)
+
+    module = ast.parse((ROOT / 'tests/test_output_contexts.py').read_text())
+    assert any(
+        isinstance(node, ast.Assign)
+        and any(isinstance(target, ast.Name) and target.id == 'pytestmark'
+                for target in node.targets)
+        and ast.unparse(node.value) == 'pytest.mark.r_quarto'
+        for node in module.body
+    )
+
+    jobs = workflow('validate.yml')['jobs']
+    fast_runs = [step.get('run', '') for step in jobs['fast']['steps']]
+    pytest_runs = [run for run in fast_runs if 'python -m pytest' in run]
+    assert len(pytest_runs) == 1
+    args = shlex.split(pytest_runs[0])
+    assert args[args.index('-m', args.index('pytest')) + 1] == 'not r_quarto'
+
+    assert jobs['container']['needs'] == 'fast'
+    steps = jobs['container']['steps']
+    selected = [index for index, step in enumerate(steps)
+                if step.get('name') == 'Run R and Quarto context regressions']
+    assert len(selected) == 1
+    index = selected[0]
+    assert any('docker build' in step.get('run', '') for step in steps[:index])
+    assert any('check_report_runtime.py' in step.get('run', '')
+               for step in steps[:index])
+    run = steps[index]['run']
+    assert 'health-report:reports-ci' in run
+    assert 'python -m pytest -q --strict-markers -m r_quarto' in run
+    assert '--volume "$PWD:/app:ro"' in run
+    assert '--workdir /app' in run
+    assert '--network none' in run
+    assert 'continue-on-error' not in steps[index]
+    assert 'if' not in steps[index]
+    assert '||' not in run

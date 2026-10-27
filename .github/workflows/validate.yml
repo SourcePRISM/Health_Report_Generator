@@ -30,7 +30,7 @@ jobs:
       - name: Lint Python (Ruff)
         run: ruff check --output-format=github .
       - name: Unit, schema and contract tests
-        run: python -m pytest -q
+        run: python -m pytest -q --strict-markers -m "not r_quarto"
       - name: Real-wrapper secret scanner regression tests
         run: bash scripts/ci/test_secret_scan.sh
       - name: Snakemake dry run
@@ -64,6 +64,16 @@ jobs:
             --env HOME=/tmp \
             health-report:reports-ci \
             python - < scripts/ci/check_report_runtime.py
+
+      - name: Run R and Quarto context regressions
+        run: |
+          docker run --rm --pull never --network none \
+            --user "$(id -u):$(id -g)" \
+            --env HOME=/tmp \
+            --volume "$PWD:/app:ro" \
+            --workdir /app \
+            health-report:reports-ci \
+            python -m pytest -q --strict-markers -m r_quarto -p no:cacheprovider
 
       - name: Build all audiences inside report container
         run: |

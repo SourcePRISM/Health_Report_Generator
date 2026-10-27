@@ -33,8 +33,8 @@ if(knitr::is_html_output()) cat(findings_html(b))
 if(knitr::is_html_output()) cat(provenance_script(), interactive_tables_script())
 if(knitr::is_latex_output() && presentation_profile(b)$layout == 'editorial') {
   p <- presentation_profile(b)
-  cat('Audience: **',p$display_name,'**. Presentation: ',p$layout,'.\n\n',sep='')
-  cat('Selected diseases: ',paste(label_topic(b,group_topics(b)),collapse=', '),'.\n\n',sep='')
+  cat('Audience: **',markdown_text(p$display_name),'**. Presentation: ',p$layout,'.\n\n',sep='')
+  cat('Selected diseases: ',markdown_text(paste(label_topic(b,group_topics(b)),collapse=', ')),'.\n\n',sep='')
   cat('Notifications are not all infections. Surveillance and testing affect these descriptive comparisons; they do not establish causes or statistical significance.\n\n')
   cat('## What changed since ',b$cfg$reference_year,'?\n\n',sep='')
   cat('**',if(b$cfg$geography=='CHFL') 'Switzerland + Liechtenstein' else 'Switzerland',' · ',paste(b$cfg$years,collapse='–'),'**\n\n',sep='')
@@ -44,7 +44,7 @@ if(knitr::is_latex_output() && presentation_profile(b)$layout == 'editorial') {
       if(!paste0(subject, ':reference_change') %in% b$metrics$metric_id) next
       if(subject=='viral:sensitivity' && !length(b$cfg$sensitivity_exclude)) next
       label <- switch(subject,'viral:main'='Viral notifications','bacterial:main'='Bacterial notifications','viral:sensitivity'=paste('Viral without',sensitivity_label(b)))
-      cat('- **',label,': ',format_pct(metric_value(b,paste0(subject,':reference_change'))),'** in ',report_year(b),' compared with ',b$cfg$reference_year,'.\n',sep='')
+      cat('- **',markdown_text(label),': ',format_pct(metric_value(b,paste0(subject,':reference_change'))),'** in ',report_year(b),' compared with ',b$cfg$reference_year,'.\n',sep='')
     }
   }
   cat('\nFull selection rules, source records and calculation references are in the companion [Methods & sources report](methods.pdf).\n\n')

@@ -1,9 +1,13 @@
-"""Failure-recoverable custom-report output on a trusted local filesystem.
+"""Verified custom output with atomic Linux directory handoff.
 
-Single writer only. Directory handoff is not universally atomic or crash-durable.
-Cleanup is best-effort; failed restoration retains its recovery directory.
+Trusted filesystem and single writer only; unsupported operations fail closed.
+Post-handoff synchronization failure is explicit and retains material.
 """
+import ctypes
+import errno
 import hashlib
+import os
+import sys
 import json
 import shutil
 import tempfile
@@ -26,6 +30,58 @@ def _digest(path):
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             result.update(chunk)
     return result.hexdigest()
+
+
+RENAME_NOREPLACE = 1
+RENAME_EXCHANGE = 2
+
+
+class OutputPublicationUncertainError(RuntimeError):
+    """Handoff completed but subsequent directory synchronization failed."""
+
+    def __init__(self, directory, destination):
+        self.recovery_directory = Path(directory)
+        self.destination = Path(destination)
+        super().__init__(
+            f"Publication handoff completed but durability is uncertain; "
+            f"inspect {destination}; retained material at {directory}"
+        )
+
+
+def _renameat2(source, destination, flags):
+    """Require the atomic Linux primitive; never use a non-atomic fallback."""
+    if sys.platform != "linux":
+        raise OSError(errno.ENOTSUP, "Atomic directory publication requires Linux")
+    operation = getattr(ctypes.CDLL(None, use_errno=True), "renameat2", None)
+    if operation is None:
+        raise OSError(errno.ENOSYS, "Atomic publication requires renameat2")
+    operation.argtypes = [ctypes.c_int, ctypes.c_char_p, ctypes.c_int,
+                          ctypes.c_char_p, ctypes.c_uint]
+    operation.restype = ctypes.c_int
+    if operation(-100, os.fsencode(source), -100, os.fsencode(destination), flags):
+        code = ctypes.get_errno()
+        raise OSError(code, "Atomic handoff failed: " + os.strerror(code),
+                      os.fspath(destination))
+
+
+def _sync_directory(path):
+    fd = os.open(path, os.O_RDONLY | os.O_DIRECTORY)
+    try:
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+
+
+def _sync_tree(root):
+    directories = [root]
+    for path in root.rglob("*"):
+        if path.is_dir():
+            directories.append(path)
+        elif path.is_file():
+            with path.open("rb") as handle:
+                os.fsync(handle.fileno())
+    for path in sorted(directories, key=lambda p: len(p.parts), reverse=True):
+        _sync_directory(path)
 
 
 def publish_cached_report(source, destination, expected_key):
@@ -64,7 +120,7 @@ def publish_cached_report(source, destination, expected_key):
     work = Path(tempfile.mkdtemp(
         prefix=".sourceprism-output-", dir=destination.parent
     ))
-    stage, previous = work / "replacement", work / "previous"
+    stage = work / "replacement"
     retain = False
     try:
         shutil.copytree(source, stage, symlinks=True)
@@ -80,21 +136,20 @@ def publish_cached_report(source, destination, expected_key):
             raise ValueError("Staged report failed inventory verification.")
         (stage / ENTRY).unlink()
 
+        # Verify and synchronize the entire candidate before its handoff.
+        _sync_tree(stage)
+        _sync_directory(work)
+        _sync_directory(destination.parent)
+        flags = RENAME_EXCHANGE if destination.exists() else RENAME_NOREPLACE
+        _renameat2(stage, destination, flags)
         try:
-            if destination.exists():
-                destination.rename(previous)
-            stage.rename(destination)
-        except BaseException:
-            if previous.exists():
-                try:
-                    if destination.exists() or destination.is_symlink():
-                        raise RuntimeError("Destination appeared during restoration.")
-                    previous.rename(destination)
-                except BaseException as exc:
-                    retain = True
-                    raise OutputRecoveryError(work) from exc
-            raise
+            _sync_directory(work)
+            _sync_directory(destination.parent)
+        except BaseException as exc:
+            retain = True
+            raise OutputPublicationUncertainError(work, destination) from exc
         return destination
     finally:
         if not retain:
+            # After exchange, stage holds the old tree; cleanup is best-effort.
             shutil.rmtree(work, ignore_errors=True)
