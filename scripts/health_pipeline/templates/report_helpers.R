@@ -23,6 +23,35 @@ change_table <- function(b) {
 }
 
 esc <- function(x) as.character(htmltools::htmlEscape(as.character(x)))
+
+# Attribute and Markdown sinks have different grammars from HTML text.
+esc_attr <- function(x) as.character(htmltools::htmlEscape(as.character(x), attribute=TRUE))
+
+# Inline metadata/cells are literal text, not author-supplied Markdown/TeX.
+# Numeric references keep punctuation from becoming parser syntax. Inline
+# control characters are normalized to spaces; original values stay in JSON/CSV.
+markdown_text <- function(x) vapply(as.character(x), function(value) {
+  if(is.na(value)) return('Not available')
+  codes <- utf8ToInt(enc2utf8(value))
+  punctuation <- c(33:47, 58:64, 91:96, 123:126)
+  paste(vapply(codes, function(code) {
+    if(code < 32L || code == 127L) return(' ')
+    if(code %in% punctuation) return(sprintf('&#%d;', code))
+    intToUtf8(code)
+  }, character(1)), collapse='')
+}, character(1), USE.NAMES=FALSE)
+
+markdown_table <- function(d) {
+  d <- as.data.frame(d, check.names=FALSE)
+  for(name in names(d)) {
+    if(is.character(d[[name]]) || is.factor(d[[name]])) {
+      d[[name]] <- markdown_text(d[[name]])
+    }
+  }
+  names(d) <- markdown_text(names(d))
+  knitr::kable(d, row.names=FALSE, format='pipe', escape=FALSE)
+}
+
 metric_value <- function(b,id) { x<-b$metrics$value[match(id,b$metrics$metric_id)]; if(length(x)) x else NA_real_ }
 format_pct <- function(x,digits=0) ifelse(is.na(x),'Not available',sprintf(paste0('%+.',digits,'f%%'),x))
 label_topic <- function(b,x) {
@@ -137,7 +166,7 @@ plot_small_multiples <- function(b) {
 }
 chart_image <- function(plot,alt,width=6,height=3.8) {
   p<-tempfile(fileext='.png');on.exit(unlink(p));ggplot2::ggsave(p,plot,width=width,height=height,dpi=180,bg='white')
-  paste0('<img alt="',esc(alt),'" src="',knitr::image_uri(p),'">')
+  paste0('<img alt="',esc_attr(alt),'" src="',knitr::image_uri(p),'">')
 }
 report_navigation <- function(b,methods=FALSE,format='html') {
   paste0('<header class="dash-nav"><span class="dash-brand">SURVEILLANCE / ',if(b$cfg$geography=='CHFL')'SWITZERLAND + LIECHTENSTEIN' else 'SWITZERLAND','</span><nav aria-label="Reports">',
@@ -264,7 +293,7 @@ presentation_profile <- function(b) {
 }
 presentation_open <- function(b) {
   p <- presentation_profile(b)
-  paste0('<div class="dashboard audience-', esc(p$layout), '">')
+  paste0('<div class="dashboard audience-', esc_attr(p$layout), '">')
 }
 selection_intro <- function(b) {
   p <- presentation_profile(b)

@@ -28,7 +28,7 @@ code_disclosure <- function(code) paste0(
 )
 
 document_section <- function(id, title, body) paste0(
-  '<section class="document-section" id="', esc(id), '"><h2>',
+  '<section class="document-section" id="', esc_attr(id), '"><h2>',
   esc(title), '</h2>', body, '</section>'
 )
 
@@ -41,7 +41,7 @@ document_navigation <- function(ids, titles) paste0(
   '<aside class="document-toc"><nav aria-label="Table of contents">',
   '<p>Contents</p>',
   paste(vapply(seq_along(ids), function(i) paste0(
-    '<a href="#', esc(ids[i]), '">', esc(titles[i]), '</a>'
+    '<a href="#', esc_attr(ids[i]), '">', esc(titles[i]), '</a>'
   ), character(1)), collapse=''),
   '</nav></aside>'
 )
@@ -225,19 +225,19 @@ audience_document_pdf <- function(b) {
   technical <- p$layout == 'technical'
   heading <- function(title) cat('\n\n## ', title, '\n\n', sep='')
   table_out <- function(d) {
-    print(knitr::kable(d, row.names=FALSE, format='pipe'))
+    print(markdown_table(d))
     cat('\n\n')
   }
   title <- if(technical) 'Infectious disease surveillance data report'
            else 'Infectious disease situation report'
   cat('# ', title, '\n\n', sep='')
-  cat('Audience: ', p$display_name, '. Annual selected-data report.\n\n', sep='')
+  cat('Audience: ', markdown_text(p$display_name), '. Annual selected-data report.\n\n', sep='')
   cat('Reporting window: ', paste(b$cfg$years, collapse='–'),
       '. Reference year: ', b$cfg$reference_year, '.\n\n', sep='')
 
   heading(if(technical) 'Data at a glance' else 'Situation at a glance')
   cat('Selected diseases: ',
-      paste(label_topic(b, group_topics(b)), collapse=', '), '.\n\n', sep='')
+      markdown_text(paste(label_topic(b, group_topics(b)), collapse=', ')), '.\n\n', sep='')
 
   if(show_section(b, 'headline')) {
     subjects <- c('viral:main','bacterial:main','viral:sensitivity')
@@ -251,7 +251,7 @@ audience_document_pdf <- function(b) {
         'bacterial:main'='Bacterial notifications',
         'viral:sensitivity'=paste('Viral without', sensitivity_label(b))
       )
-      cat('- ', label, ': ',
+      cat('- ', markdown_text(label), ': ',
           format_pct(metric_value(b, paste0(subject, ':reference_change'))),
           ' in ', report_year(b), ' versus ', b$cfg$reference_year,
           '.\n', sep='')
@@ -328,7 +328,7 @@ audience_document_pdf <- function(b) {
       'levels, seasonal windows, age distributions or canton maps.\n\n', sep='')
 
   heading('Provenance')
-  cat('Presentation version: ', p$version, '.\n\n', sep='')
+  cat('Presentation version: ', markdown_text(p$version), '.\n\n', sep='')
   cat('Snapshot:\n\n```\n', b$manifest$snapshot_id, '\n```\n\n', sep='')
   cat('Keep provenance.json and the verified data bundle with this report. ',
       'Source definitions and record-level traceability are in the companion ',
