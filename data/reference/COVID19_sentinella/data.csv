@@ -2351,62 +2351,83 @@ consultations,2026-W32,week,region_3,sentinella_region,all,agegroup_ili_ari,all,
 consultations,2026-W32,week,region_4,sentinella_region,all,agegroup_ili_ari,all,40.4,43103.7,1490,4.64,0.13,falling,1.7,NA,NA,NA,NA,TRUE
 consultations,2026-W32,week,region_5,sentinella_region,all,agegroup_ili_ari,all,430.1,49971.1,1851,16.01,0.43,falling,18.2,NA,NA,NA,NA,TRUE
 consultations,2026-W32,week,region_6,sentinella_region,all,agegroup_ili_ari,all,43.4,13070.9,696,7.65,0.14,falling,1.8,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,CH,country,all,agegroup_ili_ari,all,2865.9,229306,11059,31.4,0.65,rising,100,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,region_1,sentinella_region,all,agegroup_ili_ari,all,802.3,34158.3,1808,40.99,0.77,rising,26.3,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,region_2,sentinella_region,all,agegroup_ili_ari,all,310.8,48342.9,2333,20.69,0.43,stagnant,10.2,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,region_3,sentinella_region,all,agegroup_ili_ari,all,883.3,41933.5,2004,57.23,1.2,rising,29,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,CH,country,all,agegroup_ili_ari,all,2844.9,231015.6,11142,31.17,0.65,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,region_1,sentinella_region,all,agegroup_ili_ari,all,802.3,34158.3,1808,40.99,0.77,rising,26.4,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,region_2,sentinella_region,all,agegroup_ili_ari,all,300.1,50052.5,2416,19.98,0.41,stagnant,9.9,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,region_3,sentinella_region,all,agegroup_ili_ari,all,883.3,41933.5,2004,57.23,1.2,rising,29.1,NA,NA,NA,NA,TRUE
 consultations,2026-W33,week,region_4,sentinella_region,all,agegroup_ili_ari,all,93.5,37233.3,1599,10.74,0.25,rising,3.1,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,region_5,sentinella_region,all,agegroup_ili_ari,all,852.7,56715.2,2597,31.74,0.69,rising,28,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,region_5,sentinella_region,all,agegroup_ili_ari,all,852.7,56715.2,2597,31.74,0.69,rising,28.1,NA,NA,NA,NA,TRUE
 consultations,2026-W33,week,region_6,sentinella_region,all,agegroup_ili_ari,all,103.9,10922.7,718,18.31,0.28,falling,3.4,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,CH,country,all,agegroup_ili_ari,all,3525.8,225237.9,12611,38.63,0.69,rising,100,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,region_1,sentinella_region,all,agegroup_ili_ari,all,1292.5,36341.2,2227,66.04,1.08,rising,34,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,region_2,sentinella_region,all,agegroup_ili_ari,all,388.8,42504.4,2380,25.88,0.46,stagnant,10.2,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,region_3,sentinella_region,all,agegroup_ili_ari,all,927.3,39943.5,2211,60.08,1.09,rising,24.4,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,region_4,sentinella_region,all,agegroup_ili_ari,all,134.5,38847.5,1928,15.45,0.31,rising,3.5,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,region_5,sentinella_region,all,agegroup_ili_ari,all,832.5,54858,2894,30.99,0.59,rising,21.9,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,region_6,sentinella_region,all,agegroup_ili_ari,all,222.6,12743.3,971,39.24,0.51,stagnant,5.9,NA,NA,NA,NA,TRUE
-consultations,2026-W35,week,CH,country,all,agegroup_ili_ari,all,4421.2,208488.6,12016,48.44,0.84,rising,100,NA,NA,NA,NA,TRUE
-consultations,2026-W35,week,region_1,sentinella_region,all,agegroup_ili_ari,all,2386.6,35261.9,2211,121.94,1.94,rising,49.1,NA,NA,NA,NA,TRUE
-consultations,2026-W35,week,region_2,sentinella_region,all,agegroup_ili_ari,all,556.1,40517.1,2328,37.02,0.64,stagnant,11.4,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,CH,country,all,agegroup_ili_ari,all,3512.1,226071.8,12675,38.48,0.69,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,region_1,sentinella_region,all,agegroup_ili_ari,all,1292.5,36341.2,2227,66.04,1.08,rising,34.2,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,region_2,sentinella_region,all,agegroup_ili_ari,all,388.8,42504.4,2380,25.88,0.46,stagnant,10.3,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,region_3,sentinella_region,all,agegroup_ili_ari,all,927.3,39943.5,2211,60.08,1.09,rising,24.5,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,region_4,sentinella_region,all,agegroup_ili_ari,all,134.5,38847.5,1928,15.45,0.31,rising,3.6,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,region_5,sentinella_region,all,agegroup_ili_ari,all,832.5,54858,2894,30.99,0.59,rising,22,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,region_6,sentinella_region,all,agegroup_ili_ari,all,208.9,13577.2,1035,36.83,0.48,stagnant,5.5,NA,NA,NA,NA,TRUE
+consultations,2026-W35,week,CH,country,all,agegroup_ili_ari,all,4414.8,208803.4,12034,48.37,0.84,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W35,week,region_1,sentinella_region,all,agegroup_ili_ari,all,2386.6,35261.9,2211,121.94,1.94,rising,49.2,NA,NA,NA,NA,TRUE
+consultations,2026-W35,week,region_2,sentinella_region,all,agegroup_ili_ari,all,551.9,40831.9,2346,36.74,0.64,stagnant,11.4,NA,NA,NA,NA,TRUE
 consultations,2026-W35,week,region_3,sentinella_region,all,agegroup_ili_ari,all,834.7,38829.4,2203,54.08,0.95,rising,17.2,NA,NA,NA,NA,TRUE
 consultations,2026-W35,week,region_4,sentinella_region,all,agegroup_ili_ari,all,52,33478.6,1692,5.97,0.12,rising,1.1,NA,NA,NA,NA,TRUE
 consultations,2026-W35,week,region_5,sentinella_region,all,agegroup_ili_ari,all,681.8,47289.3,2557,25.38,0.47,rising,14,NA,NA,NA,NA,TRUE
 consultations,2026-W35,week,region_6,sentinella_region,all,agegroup_ili_ari,all,346,13112.3,1025,61.01,0.78,rising,7.1,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,CH,country,all,agegroup_ili_ari,all,4764.4,222203.5,12560,52.2,0.92,rising,100,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,region_1,sentinella_region,all,agegroup_ili_ari,all,1798.9,35903.3,2212,91.91,1.49,rising,34.6,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,CH,country,all,agegroup_ili_ari,all,4756.1,222617.9,12585,52.11,0.92,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,region_1,sentinella_region,all,agegroup_ili_ari,all,1778.5,36317.6,2237,90.87,1.48,rising,34.4,NA,NA,NA,NA,TRUE
 consultations,2026-W36,week,region_2,sentinella_region,all,agegroup_ili_ari,all,642.2,39761.5,2236,42.75,0.76,rising,12.4,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,region_3,sentinella_region,all,agegroup_ili_ari,all,1364.8,37315.8,2074,88.43,1.59,rising,26.3,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,region_3,sentinella_region,all,agegroup_ili_ari,all,1364.8,37315.8,2074,88.43,1.59,rising,26.4,NA,NA,NA,NA,TRUE
 consultations,2026-W36,week,region_4,sentinella_region,all,agegroup_ili_ari,all,111,39203.6,1953,12.75,0.26,rising,2.1,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,region_5,sentinella_region,all,agegroup_ili_ari,all,991,54218.5,2873,36.89,0.7,rising,19.1,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,region_6,sentinella_region,all,agegroup_ili_ari,all,287.2,15800.9,1212,50.63,0.66,rising,5.5,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,CH,country,all,agegroup_ili_ari,all,6241.1,204739.1,11481,68.38,1.22,rising,100,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,region_1,sentinella_region,all,agegroup_ili_ari,all,1802.6,35830.7,2182,92.1,1.51,rising,27.4,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,region_2,sentinella_region,all,agegroup_ili_ari,all,388.5,38670.5,2160,25.86,0.46,rising,5.9,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,region_3,sentinella_region,all,agegroup_ili_ari,all,2212.3,33487.9,1847,143.34,2.6,rising,33.6,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,region_5,sentinella_region,all,agegroup_ili_ari,all,991,54218.5,2873,36.89,0.7,rising,19.2,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,region_6,sentinella_region,all,agegroup_ili_ari,all,287.2,15800.9,1212,50.63,0.66,rising,5.6,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,CH,country,all,agegroup_ili_ari,all,6198.2,209103.3,11718,67.91,1.21,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,region_1,sentinella_region,all,agegroup_ili_ari,all,1828,36403.2,2216,93.4,1.53,rising,28.3,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,region_2,sentinella_region,all,agegroup_ili_ari,all,388.5,38670.5,2160,25.86,0.46,rising,6,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,region_3,sentinella_region,all,agegroup_ili_ari,all,2045.6,36214.8,1995,132.54,2.41,rising,31.6,NA,NA,NA,NA,TRUE
 consultations,2026-W37,week,region_4,sentinella_region,all,agegroup_ili_ari,all,307,31194.6,1536,35.26,0.72,rising,4.7,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,region_5,sentinella_region,all,agegroup_ili_ari,all,1499,51968.6,2725,55.8,1.06,rising,22.8,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,region_6,sentinella_region,all,agegroup_ili_ari,all,375.7,13586.8,1031,66.24,0.87,rising,5.7,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,CH,country,all,agegroup_ili_ari,all,7884.9,222249.5,12673,86.39,1.52,rising,100,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,region_1,sentinella_region,all,agegroup_ili_ari,all,2283.3,40286.8,2504,116.66,1.88,rising,27.3,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,region_2,sentinella_region,all,agegroup_ili_ari,all,860.9,41876.5,2387,57.31,1.01,rising,10.3,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,region_3,sentinella_region,all,agegroup_ili_ari,all,2289.3,36406,2048,148.33,2.64,rising,27.4,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,region_5,sentinella_region,all,agegroup_ili_ari,all,1519.7,53033.3,2780,56.57,1.08,rising,23.5,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,region_6,sentinella_region,all,agegroup_ili_ari,all,375.7,13586.8,1031,66.24,0.87,rising,5.8,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,CH,country,all,agegroup_ili_ari,all,7905.9,228587.1,13051,86.62,1.52,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,region_1,sentinella_region,all,agegroup_ili_ari,all,2255.7,40781.1,2534,115.25,1.85,rising,27.1,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,region_2,sentinella_region,all,agegroup_ili_ari,all,893.1,42053.6,2397,59.45,1.04,rising,10.7,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,region_3,sentinella_region,all,agegroup_ili_ari,all,2098.1,39723.2,2232,135.94,2.42,rising,25.2,NA,NA,NA,NA,TRUE
 consultations,2026-W38,week,region_4,sentinella_region,all,agegroup_ili_ari,all,282.8,36944,1858,32.48,0.65,rising,3.4,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,region_5,sentinella_region,all,agegroup_ili_ari,all,1939.9,54011.1,2889,72.21,1.35,rising,23.2,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,region_6,sentinella_region,all,agegroup_ili_ari,all,713.2,12725,987,125.74,1.62,rising,8.5,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,CH,country,all,agegroup_ili_ari,all,7777.2,203028.4,11172,85.21,1.55,rising,100,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,region_1,sentinella_region,all,agegroup_ili_ari,all,2301.1,32322.3,1952,117.57,1.95,rising,27.5,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,region_2,sentinella_region,all,agegroup_ili_ari,all,1053.7,29941.1,1644,70.14,1.28,rising,12.6,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,region_3,sentinella_region,all,agegroup_ili_ari,all,1819.6,37318.4,2031,117.9,2.17,rising,21.7,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,region_4,sentinella_region,all,agegroup_ili_ari,all,247.3,38726.2,1894,28.4,0.58,rising,3,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,region_5,sentinella_region,all,agegroup_ili_ari,all,2360.3,52353.5,2726,87.86,1.69,rising,28.2,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,region_6,sentinella_region,all,agegroup_ili_ari,all,596.2,12367,925,105.12,1.41,rising,7.1,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,CH,country,all,agegroup_ili_ari,all,8361.4,167020.3,8591,91.61,1.78,rising,100,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,region_1,sentinella_region,all,agegroup_ili_ari,all,2992.2,34012.7,1897,152.88,2.74,rising,30,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,region_2,sentinella_region,all,agegroup_ili_ari,all,1376.6,32735.1,1676,91.64,1.79,rising,13.8,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,region_3,sentinella_region,all,agegroup_ili_ari,all,3607,13264.1,678,233.71,4.57,rising,36.2,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,region_4,sentinella_region,all,agegroup_ili_ari,all,151.9,28649.9,1287,17.45,0.39,stagnant,1.5,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,region_5,sentinella_region,all,agegroup_ili_ari,all,921.4,46647.9,2239,34.3,0.71,rising,9.2,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,region_6,sentinella_region,all,agegroup_ili_ari,all,920.3,11710.7,814,162.25,2.33,rising,9.2,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,region_5,sentinella_region,all,agegroup_ili_ari,all,2143.5,55147.5,2949,79.79,1.49,rising,25.7,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,region_6,sentinella_region,all,agegroup_ili_ari,all,651.1,13937.7,1081,114.8,1.48,rising,7.8,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,CH,country,all,agegroup_ili_ari,all,7894.1,210431,11594,86.49,1.57,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,region_1,sentinella_region,all,agegroup_ili_ari,all,2414.6,32423.4,1958,123.37,2.04,rising,28.3,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,region_2,sentinella_region,all,agegroup_ili_ari,all,1036.1,30448.4,1672,68.97,1.26,rising,12.2,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,region_3,sentinella_region,all,agegroup_ili_ari,all,1684.8,40306.4,2193,109.16,2.01,rising,19.8,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,region_4,sentinella_region,all,agegroup_ili_ari,all,247.2,38746.7,1895,28.39,0.58,rising,2.9,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,region_5,sentinella_region,all,agegroup_ili_ari,all,2592.9,54911.6,2858,96.52,1.85,rising,30.4,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,region_6,sentinella_region,all,agegroup_ili_ari,all,542.4,13594.5,1018,95.63,1.28,rising,6.4,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,CH,country,all,agegroup_ili_ari,all,7810.1,193993.4,10018,85.57,1.66,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,region_1,sentinella_region,all,agegroup_ili_ari,all,2642.8,39991,2225,135.03,2.43,rising,31.1,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,region_2,sentinella_region,all,agegroup_ili_ari,all,1203.7,33694.3,1725,80.13,1.57,rising,14.2,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,region_3,sentinella_region,all,agegroup_ili_ari,all,2324.8,20580.5,1048,150.63,2.96,rising,27.4,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,region_4,sentinella_region,all,agegroup_ili_ari,all,144.9,30040.3,1349,16.64,0.37,stagnant,1.7,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,region_5,sentinella_region,all,agegroup_ili_ari,all,1435.9,54260.8,2599,53.45,1.12,rising,16.9,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,region_6,sentinella_region,all,agegroup_ili_ari,all,735.4,15426.6,1072,129.65,1.87,rising,8.7,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,CH,country,all,agegroup_ili_ari,all,9160,214231.4,9666,100.36,2.22,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,region_1,sentinella_region,all,agegroup_ili_ari,all,3012.9,34428.3,1685,153.94,3.15,rising,30.8,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,region_2,sentinella_region,all,agegroup_ili_ari,all,1381.6,45668.7,2052,91.97,2.05,rising,14.1,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,region_3,sentinella_region,all,agegroup_ili_ari,all,2333.3,31749.4,1405,151.18,3.42,rising,23.8,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,region_4,sentinella_region,all,agegroup_ili_ari,all,83.4,31316,1214,9.58,0.25,falling,0.9,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,region_5,sentinella_region,all,agegroup_ili_ari,all,2136.8,52805.6,2200,79.54,1.91,rising,21.8,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,region_6,sentinella_region,all,agegroup_ili_ari,all,838.5,18263.4,1110,147.84,2.43,rising,8.6,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,CH,country,all,agegroup_ili_ari,all,8450.8,201963.4,9932,92.59,1.88,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,region_1,sentinella_region,all,agegroup_ili_ari,all,4387.9,16950.1,923,224.19,4.12,rising,40.5,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,region_2,sentinella_region,all,agegroup_ili_ari,all,1021.7,51460.6,2546,68.01,1.37,rising,9.4,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,region_3,sentinella_region,all,agegroup_ili_ari,all,1589.2,41758.1,2024,102.97,2.12,falling,14.7,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,region_4,sentinella_region,all,agegroup_ili_ari,all,140.7,37125.5,1623,16.16,0.37,falling,1.3,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,region_5,sentinella_region,all,agegroup_ili_ari,all,2765.4,40801.9,1883,102.94,2.23,rising,25.5,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,region_6,sentinella_region,all,agegroup_ili_ari,all,940.7,13867.2,933,165.86,2.47,rising,8.7,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,CH,country,all,agegroup_ili_ari,all,9359.9,202830.1,11498,102.55,1.81,rising,100,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,region_1,sentinella_region,all,agegroup_ili_ari,all,2207,19511.1,1210,112.76,1.82,rising,21.7,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,region_2,sentinella_region,all,agegroup_ili_ari,all,1404.1,41723.8,2406,93.47,1.62,rising,13.8,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,region_3,sentinella_region,all,agegroup_ili_ari,all,2396.4,35423.2,2013,155.27,2.73,rising,23.6,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,region_4,sentinella_region,all,agegroup_ili_ari,all,277.5,37648.8,1907,31.87,0.63,stagnant,2.7,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,region_5,sentinella_region,all,agegroup_ili_ari,all,2646.4,57859.9,3126,98.51,1.82,rising,26.1,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,region_6,sentinella_region,all,agegroup_ili_ari,all,1223.4,10663.3,836,215.69,2.75,rising,12,NA,NA,NA,NA,TRUE
 consultations,2020-W10,week,CH,country,0 - 4,agegroup_ili_ari,all,NA,11100.8,1125.2,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2020-W10,week,CH,country,15 - 29,agegroup_ili_ari,all,NA,29265.4,1383.2,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2020-W10,week,CH,country,30 - 64,agegroup_ili_ari,all,NA,81953.2,4780.7,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
@@ -4087,46 +4108,61 @@ consultations,2026-W32,week,CH,country,15 - 29,agegroup_ili_ari,all,658.4,38804.
 consultations,2026-W32,week,CH,country,30 - 64,agegroup_ili_ari,all,1068.7,117208.2,3656.6,23.89,0.77,NA,49.6,NA,NA,NA,NA,TRUE
 consultations,2026-W32,week,CH,country,5 - 14,agegroup_ili_ari,all,106.1,26187,696.8,11.46,0.43,NA,4.9,NA,NA,NA,NA,TRUE
 consultations,2026-W32,week,CH,country,65+,agegroup_ili_ari,all,115,47272.4,3284,6.35,0.09,NA,5.3,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,CH,country,0 - 4,agegroup_ili_ari,all,260.3,9545.6,756,62.86,0.79,NA,9,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,CH,country,15 - 29,agegroup_ili_ari,all,803.8,37399.1,1217.3,53.48,1.64,NA,27.9,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,CH,country,30 - 64,agegroup_ili_ari,all,1398.9,115136.9,4370.7,31.27,0.82,NA,48.6,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,CH,country,5 - 14,agegroup_ili_ari,all,217.8,21258,827.3,23.52,0.6,NA,7.6,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,CH,country,65+,agegroup_ili_ari,all,197,45966.4,3887.7,10.88,0.13,NA,6.8,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,CH,country,0 - 4,agegroup_ili_ari,all,528.4,8619.4,819.4,127.62,1.34,NA,14.6,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,CH,country,15 - 29,agegroup_ili_ari,all,1342.7,36939.2,1392.6,89.34,2.37,NA,37.1,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,CH,country,30 - 64,agegroup_ili_ari,all,1054.4,114576.4,5025.1,23.57,0.54,NA,29.2,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,CH,country,5 - 14,agegroup_ili_ari,all,334.4,19384.2,908,36.11,0.77,NA,9.2,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,CH,country,65+,agegroup_ili_ari,all,356.5,45718.8,4465.9,19.69,0.2,NA,9.9,NA,NA,NA,NA,TRUE
-consultations,2026-W35,week,CH,country,0 - 4,agegroup_ili_ari,all,767,8097.3,793.1,185.25,1.89,NA,16.6,NA,NA,NA,NA,TRUE
-consultations,2026-W35,week,CH,country,15 - 29,agegroup_ili_ari,all,928.8,33983.2,1321.5,61.8,1.59,NA,20.1,NA,NA,NA,NA,TRUE
-consultations,2026-W35,week,CH,country,30 - 64,agegroup_ili_ari,all,1648.5,105830,4766.3,36.85,0.82,NA,35.6,NA,NA,NA,NA,TRUE
-consultations,2026-W35,week,CH,country,5 - 14,agegroup_ili_ari,all,1115.7,18258.3,890.7,120.49,2.47,NA,24.1,NA,NA,NA,NA,TRUE
-consultations,2026-W35,week,CH,country,65+,agegroup_ili_ari,all,171.1,42319.9,4244.5,9.45,0.09,NA,3.7,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,CH,country,0 - 4,agegroup_ili_ari,all,943.5,8776.4,837.1,227.88,2.39,NA,19,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,CH,country,15 - 29,agegroup_ili_ari,all,1157.1,36369.6,1384,76.99,2.02,NA,23.3,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,CH,country,30 - 64,agegroup_ili_ari,all,1591.7,112437.3,4977.3,35.58,0.8,NA,32.1,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,CH,country,5 - 14,agegroup_ili_ari,all,989.4,19653.3,916.4,106.85,2.29,NA,19.9,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,CH,country,65+,agegroup_ili_ari,all,281.9,44967.1,4445.2,15.57,0.16,NA,5.7,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,CH,country,0 - 4,agegroup_ili_ari,all,605.2,8893.9,861.1,146.17,1.51,NA,9.6,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,CH,country,15 - 29,agegroup_ili_ari,all,1702.5,33546.1,1267.3,113.28,3,NA,27.1,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,CH,country,30 - 64,agegroup_ili_ari,all,2326.2,101917.4,4445.9,52,1.19,NA,37,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,CH,country,5 - 14,agegroup_ili_ari,all,937.7,19750.3,939.8,101.26,2.13,NA,14.9,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,CH,country,65+,agegroup_ili_ari,all,713,40631.3,3966.8,39.38,0.4,NA,11.3,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,CH,country,0 - 4,agegroup_ili_ari,all,1270.5,8799.4,875.6,306.84,3.08,NA,15.8,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,CH,country,15 - 29,agegroup_ili_ari,all,1771.2,36486.4,1399.6,117.85,3.07,NA,22.1,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,CH,country,30 - 64,agegroup_ili_ari,all,3381,112464.9,4999.7,75.58,1.7,NA,42.1,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,CH,country,5 - 14,agegroup_ili_ari,all,751,19728.7,963.7,81.1,1.66,NA,9.4,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,CH,country,65+,agegroup_ili_ari,all,849.4,44770.1,4434.4,46.91,0.47,NA,10.6,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,CH,country,0 - 4,agegroup_ili_ari,all,687,9040.5,825.3,165.92,1.82,NA,8.8,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,CH,country,15 - 29,agegroup_ili_ari,all,1858.6,33156.7,1236.8,123.66,3.31,NA,23.9,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,CH,country,30 - 64,agegroup_ili_ari,all,3550.1,100806.1,4361.4,79.36,1.83,NA,45.6,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,CH,country,5 - 14,agegroup_ili_ari,all,647.4,20024.5,900,69.91,1.56,NA,8.3,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,CH,country,65+,agegroup_ili_ari,all,1041.1,40000.6,3848.5,57.5,0.6,NA,13.4,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,CH,country,0 - 4,agegroup_ili_ari,all,2088.8,7730.8,692.4,504.47,5.63,NA,25.1,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,CH,country,15 - 29,agegroup_ili_ari,all,1531.1,27486.3,950,101.87,2.95,NA,18.4,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,CH,country,30 - 64,agegroup_ili_ari,all,2668.4,82150.5,3283.9,59.65,1.49,NA,32.1,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,CH,country,5 - 14,agegroup_ili_ari,all,754.2,17188.2,765.7,81.45,1.83,NA,9.1,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,CH,country,65+,agegroup_ili_ari,all,1282.8,32464.4,2899,70.85,0.79,NA,15.4,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,CH,country,0 - 4,agegroup_ili_ari,all,260.2,9547.9,756.2,62.84,0.79,NA,9.1,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,CH,country,15 - 29,agegroup_ili_ari,all,797.6,37688.8,1226.4,53.07,1.63,NA,27.9,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,CH,country,30 - 64,agegroup_ili_ari,all,1387.2,116108.6,4407.2,31.01,0.82,NA,48.5,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,CH,country,5 - 14,agegroup_ili_ari,all,217.6,21275,827.9,23.5,0.6,NA,7.6,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,CH,country,65+,agegroup_ili_ari,all,195.2,46395.2,3924.3,10.78,0.13,NA,6.8,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,CH,country,0 - 4,agegroup_ili_ari,all,528.4,8619.4,819.4,127.62,1.34,NA,14.7,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,CH,country,15 - 29,agegroup_ili_ari,all,1337.8,37073.7,1399,89.01,2.36,NA,37.1,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,CH,country,30 - 64,agegroup_ili_ari,all,1049.9,115041.5,5051.4,23.47,0.53,NA,29.1,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,CH,country,5 - 14,agegroup_ili_ari,all,334.3,19388.9,908.3,36.1,0.77,NA,9.3,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,CH,country,65+,agegroup_ili_ari,all,354.7,45948.4,4496.9,19.59,0.2,NA,9.8,NA,NA,NA,NA,TRUE
+consultations,2026-W35,week,CH,country,0 - 4,agegroup_ili_ari,all,767,8097.7,793.1,185.24,1.89,NA,16.6,NA,NA,NA,NA,TRUE
+consultations,2026-W35,week,CH,country,15 - 29,agegroup_ili_ari,all,927.3,34036.5,1323.5,61.7,1.59,NA,20,NA,NA,NA,NA,TRUE
+consultations,2026-W35,week,CH,country,30 - 64,agegroup_ili_ari,all,1645.8,106008.9,4774.2,36.79,0.82,NA,35.6,NA,NA,NA,NA,TRUE
+consultations,2026-W35,week,CH,country,5 - 14,agegroup_ili_ari,all,1115.6,18261.4,890.8,120.47,2.47,NA,24.1,NA,NA,NA,NA,TRUE
+consultations,2026-W35,week,CH,country,65+,agegroup_ili_ari,all,170.7,42398.8,4252.4,9.43,0.09,NA,3.7,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,CH,country,0 - 4,agegroup_ili_ari,all,943.4,8778,837.4,227.84,2.39,NA,19,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,CH,country,15 - 29,agegroup_ili_ari,all,1154.7,36445.9,1386.9,76.83,2.02,NA,23.3,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,CH,country,30 - 64,agegroup_ili_ari,all,1588.1,112678.7,4989.2,35.5,0.8,NA,32,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,CH,country,5 - 14,agegroup_ili_ari,all,989.2,19659.7,916.8,106.82,2.29,NA,20,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,CH,country,65+,agegroup_ili_ari,all,281.4,45055.5,4454.8,15.54,0.16,NA,5.7,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,CH,country,0 - 4,agegroup_ili_ari,all,604.4,8905.9,862.3,145.97,1.51,NA,9.7,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,CH,country,15 - 29,agegroup_ili_ari,all,1667.8,34244,1291.7,110.97,2.94,NA,26.7,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,CH,country,30 - 64,agegroup_ili_ari,all,2354.8,104491,4556.3,52.64,1.21,NA,37.6,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,CH,country,5 - 14,agegroup_ili_ari,all,934.9,19810.4,942.7,100.96,2.12,NA,14.9,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,CH,country,65+,agegroup_ili_ari,all,695.5,41652,4064.9,38.41,0.39,NA,11.1,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,CH,country,0 - 4,agegroup_ili_ari,all,1268.6,8812.4,876.9,306.39,3.08,NA,15.7,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,CH,country,15 - 29,agegroup_ili_ari,all,1763.7,37496.1,1438.1,117.35,3.06,NA,21.8,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,CH,country,30 - 64,agegroup_ili_ari,all,3427.6,116162,5170.3,76.62,1.72,NA,42.4,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,CH,country,5 - 14,agegroup_ili_ari,all,794.9,19803.9,967.5,85.84,1.76,NA,9.8,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,CH,country,65+,agegroup_ili_ari,all,820.9,46312.7,4598.3,45.34,0.46,NA,10.2,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,CH,country,0 - 4,agegroup_ili_ari,all,685.5,9059.9,827.1,165.56,1.81,NA,8.7,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,CH,country,15 - 29,agegroup_ili_ari,all,1925,34353.1,1279.8,128.08,3.44,NA,24.3,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,CH,country,30 - 64,agegroup_ili_ari,all,3532.2,105117.1,4551.6,78.96,1.82,NA,44.6,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,CH,country,5 - 14,agegroup_ili_ari,all,644.2,20123.7,904.8,69.57,1.55,NA,8.1,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,CH,country,65+,agegroup_ili_ari,all,1126.8,41777.1,4030.7,62.23,0.65,NA,14.2,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,CH,country,0 - 4,agegroup_ili_ari,all,2035.6,8339.8,744.5,491.62,5.51,NA,25.7,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,CH,country,15 - 29,agegroup_ili_ari,all,1548.9,32021,1108.3,103.06,2.98,NA,19.6,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,CH,country,30 - 64,agegroup_ili_ari,all,2498,96705.6,3885.7,55.84,1.39,NA,31.6,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,CH,country,5 - 14,agegroup_ili_ari,all,695.6,18636.2,828.4,75.12,1.69,NA,8.8,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,CH,country,65+,agegroup_ili_ari,all,1134.9,38290.9,3451.1,62.68,0.7,NA,14.3,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,CH,country,0 - 4,agegroup_ili_ari,all,1828.5,9284.3,738.1,441.61,5.55,NA,19.8,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,CH,country,15 - 29,agegroup_ili_ari,all,1553.9,34819.7,1057.8,103.39,3.4,NA,16.8,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,CH,country,30 - 64,agegroup_ili_ari,all,4030.6,106544.5,3706.6,90.1,2.59,NA,43.7,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,CH,country,5 - 14,agegroup_ili_ari,all,755.3,20840.6,828.2,81.57,2.05,NA,8.2,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,CH,country,65+,agegroup_ili_ari,all,1059,42742.3,3335.3,58.49,0.75,NA,11.5,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,CH,country,0 - 4,agegroup_ili_ari,all,670.6,8026.4,685.7,161.97,1.9,NA,7.9,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,CH,country,15 - 29,agegroup_ili_ari,all,1899.1,32446.2,1076.7,126.36,3.81,NA,22.2,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,CH,country,30 - 64,agegroup_ili_ari,all,3860.2,101980.5,3891.7,86.29,2.26,NA,45.2,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,CH,country,5 - 14,agegroup_ili_ari,all,974.2,18061.2,752.7,105.2,2.52,NA,11.4,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,CH,country,65+,agegroup_ili_ari,all,1135.8,41449.2,3525.2,62.73,0.74,NA,13.3,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,CH,country,0 - 4,agegroup_ili_ari,all,1483.7,7813.8,762.6,358.34,3.67,NA,15.7,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,CH,country,15 - 29,agegroup_ili_ari,all,1507.3,32904.8,1259,100.29,2.62,NA,15.9,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,CH,country,30 - 64,agegroup_ili_ari,all,4460.5,103297.4,4564.1,99.71,2.26,NA,47.1,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,CH,country,5 - 14,agegroup_ili_ari,all,526.9,17573.4,852.6,56.9,1.17,NA,5.6,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,CH,country,65+,agegroup_ili_ari,all,1492.7,41240.7,4059.6,82.44,0.84,NA,15.8,NA,NA,NA,NA,TRUE
 consultations,2020-W10,week,CH,country,all,agegroup_ili_ari,female,NA,87830.2,6410.7,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2020-W10,week,CH,country,all,agegroup_ili_ari,male,NA,86716.2,5917.3,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2020-W11,week,CH,country,all,agegroup_ili_ari,female,NA,92229.9,6813.2,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
@@ -4799,22 +4835,28 @@ consultations,2026-W31,week,CH,country,all,agegroup_ili_ari,female,1526,102184.6
 consultations,2026-W31,week,CH,country,all,agegroup_ili_ari,male,1212.3,101127.9,3637.5,26.7,0.74,NA,44.3,NA,NA,NA,NA,TRUE
 consultations,2026-W32,week,CH,country,all,agegroup_ili_ari,female,1135.7,121170.3,4917.6,24.76,0.61,NA,52.7,NA,NA,NA,NA,TRUE
 consultations,2026-W32,week,CH,country,all,agegroup_ili_ari,male,1018.8,120295,4394.4,22.44,0.61,NA,47.3,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,CH,country,all,agegroup_ili_ari,female,1433.4,115207.1,5847.7,31.25,0.62,NA,50,NA,NA,NA,NA,TRUE
-consultations,2026-W33,week,CH,country,all,agegroup_ili_ari,male,1432.5,114098.9,5211.3,31.55,0.69,NA,50,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,CH,country,all,agegroup_ili_ari,female,1863.6,113211.2,6672.7,40.63,0.69,NA,52.9,NA,NA,NA,NA,TRUE
-consultations,2026-W34,week,CH,country,all,agegroup_ili_ari,male,1661.8,112026.7,5938.3,36.6,0.69,NA,47.1,NA,NA,NA,NA,TRUE
-consultations,2026-W35,week,CH,country,all,agegroup_ili_ari,female,2099.4,104860.9,6353,45.77,0.76,NA,47.5,NA,NA,NA,NA,TRUE
-consultations,2026-W35,week,CH,country,all,agegroup_ili_ari,male,2321.9,103627.7,5663,51.14,0.94,NA,52.5,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,CH,country,all,agegroup_ili_ari,female,2177.4,111651.4,6643.6,47.47,0.8,NA,45.7,NA,NA,NA,NA,TRUE
-consultations,2026-W36,week,CH,country,all,agegroup_ili_ari,male,2587.5,110552.1,5916.4,56.99,1.06,NA,54.3,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,CH,country,all,agegroup_ili_ari,female,3433.7,102860.8,6068.4,74.86,1.27,NA,55,NA,NA,NA,NA,TRUE
-consultations,2026-W37,week,CH,country,all,agegroup_ili_ari,male,2807.7,101878.4,5412.6,61.84,1.16,NA,45,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,CH,country,all,agegroup_ili_ari,female,3981.8,111732.8,6707.6,86.81,1.45,NA,50.5,NA,NA,NA,NA,TRUE
-consultations,2026-W38,week,CH,country,all,agegroup_ili_ari,male,3902.9,110516.7,5965.4,85.96,1.59,NA,49.5,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,CH,country,all,agegroup_ili_ari,female,4052.4,101866.8,5883.1,88.35,1.53,NA,52.1,NA,NA,NA,NA,TRUE
-consultations,2026-W39,week,CH,country,all,agegroup_ili_ari,male,3725.3,101161.7,5288.9,82.05,1.57,NA,47.9,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,CH,country,all,agegroup_ili_ari,female,4155.2,83897,4559.2,90.59,1.67,NA,49.7,NA,NA,NA,NA,TRUE
-consultations,2026-W40,week,CH,country,all,agegroup_ili_ari,male,4205.7,83123.3,4031.8,92.63,1.91,NA,50.3,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,CH,country,all,agegroup_ili_ari,female,1422.4,116078.6,5894.2,31.01,0.61,NA,50,NA,NA,NA,NA,TRUE
+consultations,2026-W33,week,CH,country,all,agegroup_ili_ari,male,1422,114936.9,5247.8,31.32,0.69,NA,50,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,CH,country,all,agegroup_ili_ari,female,1856.7,113634.5,6707.4,40.48,0.69,NA,52.9,NA,NA,NA,NA,TRUE
+consultations,2026-W34,week,CH,country,all,agegroup_ili_ari,male,1655.4,112437.3,5967.6,36.46,0.69,NA,47.1,NA,NA,NA,NA,TRUE
+consultations,2026-W35,week,CH,country,all,agegroup_ili_ari,female,2096.2,105021.4,6363.1,45.7,0.75,NA,47.5,NA,NA,NA,NA,TRUE
+consultations,2026-W35,week,CH,country,all,agegroup_ili_ari,male,2318.7,103782,5670.9,51.07,0.93,NA,52.5,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,CH,country,all,agegroup_ili_ari,female,2173.2,111863.8,6657.4,47.38,0.8,NA,45.7,NA,NA,NA,NA,TRUE
+consultations,2026-W36,week,CH,country,all,agegroup_ili_ari,male,2582.5,110754.1,5927.6,56.88,1.06,NA,54.3,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,CH,country,all,agegroup_ili_ari,female,3361.7,105068.5,6191.9,73.29,1.24,NA,54.2,NA,NA,NA,NA,TRUE
+consultations,2026-W37,week,CH,country,all,agegroup_ili_ari,male,2836.8,104034.8,5526.1,62.48,1.18,NA,45.8,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,CH,country,all,agegroup_ili_ari,female,3910.7,114941.2,6906.3,85.26,1.42,NA,49.5,NA,NA,NA,NA,TRUE
+consultations,2026-W38,week,CH,country,all,agegroup_ili_ari,male,3995,113646,6144.7,87.99,1.63,NA,50.5,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,CH,country,all,agegroup_ili_ari,female,4169.9,105604.4,6106.7,90.91,1.57,NA,52.8,NA,NA,NA,NA,TRUE
+consultations,2026-W39,week,CH,country,all,agegroup_ili_ari,male,3724.9,104826.6,5487.3,82.04,1.57,NA,47.2,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,CH,country,all,agegroup_ili_ari,female,3999.2,97487.3,5315.8,87.19,1.6,NA,51.2,NA,NA,NA,NA,TRUE
+consultations,2026-W40,week,CH,country,all,agegroup_ili_ari,male,3810.7,96506.1,4702.2,83.93,1.72,NA,48.8,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,CH,country,all,agegroup_ili_ari,female,4898.2,107688.4,5109.1,106.79,2.25,NA,53.5,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,CH,country,all,agegroup_ili_ari,male,4261.5,106542.9,4556.9,93.86,2.19,NA,46.5,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,CH,country,all,agegroup_ili_ari,female,5017,101484.3,5232.4,109.38,2.12,NA,59.4,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,CH,country,all,agegroup_ili_ari,male,3434.3,100479.1,4699.6,75.64,1.62,NA,40.6,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,CH,country,all,agegroup_ili_ari,female,5179.4,101840.8,6074.5,112.92,1.89,NA,55.3,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,CH,country,all,agegroup_ili_ari,male,4181.2,100989.2,5423.5,92.09,1.71,NA,44.7,NA,NA,NA,NA,TRUE
 consultations,2020-W10,week,CH,country,all,agegroup_ili_ari,unknown,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2020-W11,week,CH,country,all,agegroup_ili_ari,unknown,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2020-W12,week,CH,country,all,agegroup_ili_ari,unknown,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
@@ -5159,6 +5201,9 @@ consultations,2026-W37,week,CH,country,all,agegroup_ili_ari,unknown,NA,NA,NA,NA,
 consultations,2026-W38,week,CH,country,all,agegroup_ili_ari,unknown,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2026-W39,week,CH,country,all,agegroup_ili_ari,unknown,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2026-W40,week,CH,country,all,agegroup_ili_ari,unknown,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
+consultations,2026-W41,week,CH,country,all,agegroup_ili_ari,unknown,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
+consultations,2026-W42,week,CH,country,all,agegroup_ili_ari,unknown,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
+consultations,2026-W43,week,CH,country,all,agegroup_ili_ari,unknown,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2020-M03,month,CH,country,all,agegroup_ili_ari,all,18944.6,172081.2,566796,218.5,0.066,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2020-M04,month,CH,country,all,agegroup_ili_ari,all,40055.9,172081.2,566796,461.99,0.14,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2020-M05,month,CH,country,all,agegroup_ili_ari,all,22672.8,172081.2,566796,261.5,0.079,NA,NA,NA,NA,NA,NA,TRUE
@@ -5229,14 +5274,15 @@ consultations,2025-M09,month,CH,country,all,agegroup_ili_ari,all,27574.9,193303.
 consultations,2025-M10,month,CH,country,all,agegroup_ili_ari,all,40322.7,193303.8,559769,441.79,0.153,rising,NA,NA,NA,NA,NA,TRUE
 consultations,2025-M11,month,CH,country,all,agegroup_ili_ari,all,48633,193303.8,559769,532.84,0.184,rising,NA,NA,NA,NA,NA,TRUE
 consultations,2025-M12,month,CH,country,all,agegroup_ili_ari,all,82676.2,193303.8,559769,905.83,0.313,rising,NA,NA,NA,NA,NA,TRUE
-consultations,2026-M01,month,CH,country,all,agegroup_ili_ari,all,114423.1,208429,603636.7,1253.66,0.433,rising,NA,NA,NA,NA,NA,TRUE
-consultations,2026-M02,month,CH,country,all,agegroup_ili_ari,all,61612.7,208429,603636.7,675.05,0.233,stagnant,NA,NA,NA,NA,NA,TRUE
-consultations,2026-M03,month,CH,country,all,agegroup_ili_ari,all,40506.2,208429,603636.7,443.8,0.153,falling,NA,NA,NA,NA,NA,TRUE
-consultations,2026-M04,month,CH,country,all,agegroup_ili_ari,all,30653.4,208429,603636.7,335.85,0.116,falling,NA,NA,NA,NA,NA,TRUE
-consultations,2026-M05,month,CH,country,all,agegroup_ili_ari,all,19661.7,208429,603636.7,215.42,0.074,falling,NA,NA,NA,NA,NA,TRUE
-consultations,2026-M06,month,CH,country,all,agegroup_ili_ari,all,19924.5,208429,603636.7,218.3,0.075,falling,NA,NA,NA,NA,NA,TRUE
-consultations,2026-M07,month,CH,country,all,agegroup_ili_ari,all,12480.4,208429,603636.7,136.74,0.047,falling,NA,NA,NA,NA,NA,TRUE
-consultations,2026-M08,month,CH,country,all,agegroup_ili_ari,all,13881.4,208429,603636.7,152.09,0.053,falling,NA,NA,NA,NA,NA,TRUE
+consultations,2026-M01,month,CH,country,all,agegroup_ili_ari,all,114507.1,208276.6,603111.4,1254.58,0.433,rising,NA,NA,NA,NA,NA,TRUE
+consultations,2026-M02,month,CH,country,all,agegroup_ili_ari,all,61657.4,208276.6,603111.4,675.54,0.233,stagnant,NA,NA,NA,NA,NA,TRUE
+consultations,2026-M03,month,CH,country,all,agegroup_ili_ari,all,40535.4,208276.6,603111.4,444.12,0.153,falling,NA,NA,NA,NA,NA,TRUE
+consultations,2026-M04,month,CH,country,all,agegroup_ili_ari,all,30675.4,208276.6,603111.4,336.09,0.116,falling,NA,NA,NA,NA,NA,TRUE
+consultations,2026-M05,month,CH,country,all,agegroup_ili_ari,all,19676.3,208276.6,603111.4,215.58,0.074,falling,NA,NA,NA,NA,NA,TRUE
+consultations,2026-M06,month,CH,country,all,agegroup_ili_ari,all,19939.1,208276.6,603111.4,218.46,0.075,falling,NA,NA,NA,NA,NA,TRUE
+consultations,2026-M07,month,CH,country,all,agegroup_ili_ari,all,12489.6,208276.6,603111.4,136.84,0.047,falling,NA,NA,NA,NA,NA,TRUE
+consultations,2026-M08,month,CH,country,all,agegroup_ili_ari,all,13891.5,208276.6,603111.4,152.2,0.053,falling,NA,NA,NA,NA,NA,TRUE
+consultations,2026-M09,month,CH,country,all,agegroup_ili_ari,all,27958.2,208276.6,603111.4,306.32,0.106,stagnant,NA,NA,NA,NA,NA,TRUE
 consultations,2020,year,CH,country,all,agegroup_ili_ari,all,660143.6,172081.2,566796,7613.85,2.312,NA,NA,NA,NA,NA,NA,TRUE
 consultations,2021,year,CH,country,all,agegroup_ili_ari,all,734540,195550.4,605347,8405.51,2.715,NA,NA,74396.4,791.66,10.4,NA,TRUE
 consultations,2022,year,CH,country,all,agegroup_ili_ari,all,842382.3,195294.5,574685,9555.82,3.247,rising,NA,107842.3,1150.31,13.7,NA,TRUE
