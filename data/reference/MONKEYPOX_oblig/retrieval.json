@@ -2,9 +2,9 @@
   "dataset_id": "MONKEYPOX_oblig",
   "csv_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/MONKEYPOX_oblig/csv",
   "metadata_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/MONKEYPOX_oblig/metadata",
-  "retrieved_at_utc": "2026-10-08T09:02:52.720821+00:00",
-  "csv_sha256": "635f9e3235662c625fd99c9db001d151de5cccdb7a8dc9a59afbdf467ec18de8",
-  "metadata_sha256": "4c0bc53bfc60b1db581c1eb5bdcdc39a82a368efc56ab4c7bb65e9e21ec3b8d3",
+  "retrieved_at_utc": "2026-11-05T03:38:44.807550+00:00",
+  "csv_sha256": "dff15d3f80cc55da9ee9a1b34af2fd5941a2ac55b6bfdf5b425c053925c06656",
+  "metadata_sha256": "b66d5a35f2aaed9163a2be6d77cd855528d674f01709cc5cc338f7fefeb7e182",
   "row_count": 8,
   "columns": [
     "valueCategory",

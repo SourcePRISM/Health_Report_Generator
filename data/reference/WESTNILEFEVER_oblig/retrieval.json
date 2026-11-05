@@ -2,9 +2,9 @@
   "dataset_id": "WESTNILEFEVER_oblig",
   "csv_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/WESTNILEFEVER_oblig/csv",
   "metadata_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/WESTNILEFEVER_oblig/metadata",
-  "retrieved_at_utc": "2026-10-08T09:03:40.714239+00:00",
-  "csv_sha256": "093d7eebd3244da614c171a295f4bbb1670f5a0214bfca7bf954d598a919a12c",
-  "metadata_sha256": "43f2d38d0d5784941e44d9925f90ebeb0b50694b2259ec97fe45527e4c66cf8d",
+  "retrieved_at_utc": "2026-11-05T03:38:55.454153+00:00",
+  "csv_sha256": "6be3dc266ab7b5e480375a5fef56858398c3b06af3c26437cb82e31d18e7c519",
+  "metadata_sha256": "f481ce27272d2f5fc0742277122369a678428dd5e51a0892d92d8da7f44586d1",
   "row_count": 26,
   "columns": [
     "valueCategory",

@@ -2,9 +2,9 @@
   "dataset_id": "POSTZOSTERNEURALGIA_sentinella",
   "csv_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/POSTZOSTERNEURALGIA_sentinella/csv",
   "metadata_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/POSTZOSTERNEURALGIA_sentinella/metadata",
-  "retrieved_at_utc": "2026-10-08T09:02:53.244727+00:00",
+  "retrieved_at_utc": "2026-11-05T03:38:45.237475+00:00",
   "csv_sha256": "6393fae263ee32ff1a0d7eea96b91ffbca389e0c16f3bb8cd1799ca484aa431c",
-  "metadata_sha256": "3a50c5811ffa0293e421d1c319491487f121e5afcea94693a4cd3063edf6149a",
+  "metadata_sha256": "a54225459a6e8b41909d79d113c4dd4708bd759eab31d8c33a3294430aa4cc2f",
   "row_count": 10,
   "columns": [
     "valueCategory",

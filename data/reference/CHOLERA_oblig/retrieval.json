@@ -2,9 +2,9 @@
   "dataset_id": "CHOLERA_oblig",
   "csv_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/CHOLERA_oblig/csv",
   "metadata_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/CHOLERA_oblig/metadata",
-  "retrieved_at_utc": "2026-10-08T09:01:03.609552+00:00",
-  "csv_sha256": "a608212abf22c4186e07bffb9579fa5ce09d3305dd4bfe15e9fafd34beadbbc2",
-  "metadata_sha256": "82900a43d8898b8c70e3aee4f0c2fb91c8049ea4e266f112f4c9509dfd8fa8e5",
+  "retrieved_at_utc": "2026-11-05T03:38:21.517174+00:00",
+  "csv_sha256": "38e6096bbc3ed622cb12df9439d0305b4883da282f4002d9ff1d59b6c6f42677",
+  "metadata_sha256": "5b1b58de7d0c8cbe1ecc2285a8e6e9270fbe1df14162fd7cad12855bbed19920",
   "row_count": 26,
   "columns": [
     "valueCategory",

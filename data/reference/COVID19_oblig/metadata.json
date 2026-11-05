@@ -2,8 +2,8 @@
   "metaVariables": {
     "topic": "covid19",
     "source": "mandatory_reporting_system",
-    "publishingDate": "2026-10-28",
-    "sourceDate": "2026-10-27",
+    "publishingDate": "2026-11-04",
+    "sourceDate": "2026-11-03",
     "publicationFrequency": {
       "frequency": "weekly",
       "frequencyDescription": "-"
@@ -140,7 +140,7 @@
       "description": "Population number within the given temporal unit and grouping.",
       "valueSetOrRange": [
         16293,
-        9127125
+        9168011
       ],
       "nullValue": "NA",
       "type": "integer"
@@ -202,7 +202,7 @@
     "valueMean5y": {
       "description": "Right-aligned, rolling 5-year average of the property 'value'.",
       "valueSetOrRange": [
-        811188.6,
+        811188,
         899729.2
       ],
       "nullValue": "NA",

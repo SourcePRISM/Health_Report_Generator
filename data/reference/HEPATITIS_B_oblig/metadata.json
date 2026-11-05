@@ -2,8 +2,8 @@
   "metaVariables": {
     "topic": "hepatitis_b",
     "source": "mandatory_reporting_system",
-    "publishingDate": "2026-10-07",
-    "sourceDate": "2026-10-06",
+    "publishingDate": "2026-11-04",
+    "sourceDate": "2026-11-03",
     "publicationFrequency": {
       "frequency": "monthly",
       "frequencyDescription": "First Wednesday after day 1 of every month. The exact weekday can vary due to public holidays. Because of reporting delays, there is a gap of 3 months between the publication date and published data."
@@ -115,7 +115,7 @@
       "description": "Represents the value defined by the property 'valueCategory' within the given temporal unit and grouping.",
       "valueSetOrRange": [
         0,
-        1431
+        1432
       ],
       "nullValue": "NA",
       "type": "double"
@@ -124,7 +124,7 @@
       "description": "Cumulative sum of the property 'value' within a year.",
       "valueSetOrRange": [
         72,
-        1431
+        1432
       ],
       "nullValue": "NA",
       "type": "double"
@@ -133,7 +133,7 @@
       "description": "Right-aligned, rolling 3-year average of the property 'value' within the grouping described in the property name.",
       "valueSetOrRange": [
         1,
-        1408
+        1408.3
       ],
       "nullValue": "NA",
       "type": "double"
@@ -142,7 +142,7 @@
       "description": "Population number within the given temporal unit and grouping.",
       "valueSetOrRange": [
         37129,
-        9127125
+        9168011
       ],
       "nullValue": "NA",
       "type": "integer"
@@ -177,8 +177,8 @@
     "deltaValue": {
       "description": "Absolute difference in the metric 'value' comparing the current year to the last one.",
       "valueSetOrRange": [
-        -237,
-        113
+        -238,
+        112
       ],
       "nullValue": "NA",
       "type": "double"
@@ -186,8 +186,8 @@
     "deltaIncValue": {
       "description": "Absolute difference in the metric 'incValue' comparing the current year to the last one.",
       "valueSetOrRange": [
-        -2.91,
-        1.18
+        -2.92,
+        1.17
       ],
       "nullValue": "NA",
       "type": "double"
@@ -196,7 +196,7 @@
       "description": "Percentage difference in the metric 'incValue' comparing the current year to the last one.",
       "valueSetOrRange": [
         -18.2,
-        10.7
+        10.6
       ],
       "nullValue": "NA",
       "type": "double"
@@ -205,7 +205,7 @@
       "description": "Right-aligned, rolling 5-year average of the property 'value'.",
       "valueSetOrRange": [
         1032.2,
-        1368.4
+        1368.6
       ],
       "nullValue": "NA",
       "type": "double"

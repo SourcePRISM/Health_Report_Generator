@@ -11,7 +11,7 @@ cases,2021,year,CHFL,CHFL,all,8,8778099,0.09,NA,falling,-10,-0.12,-57.1,37.2
 cases,2022,year,CHFL,CHFL,all,18,8855062,0.2,NA,stagnant,10,0.11,122.2,30.4
 cases,2023,year,CHFL,CHFL,all,34,9002273,0.38,NA,rising,16,0.18,90,24.6
 cases,2024,year,CHFL,CHFL,all,36,9091915,0.4,NA,rising,2,0.02,5.3,22.8
-cases,2025,year,CHFL,CHFL,all,40,9127125,0.44,NA,stagnant,4,0.04,10,27.2
+cases,2025,year,CHFL,CHFL,all,40,9168011,0.44,NA,stagnant,4,0.04,10,27.2
 cases,2013,year,CH,country,all,50,8176760,0.61,NA,NA,NA,NA,NA,NA
 cases,2014,year,CH,country,all,38,8275032,0.46,NA,NA,-12,-0.15,-24.6,NA
 cases,2015,year,CH,country,all,42,8364748,0.5,NA,stagnant,4,0.04,8.7,NA
@@ -24,4 +24,4 @@ cases,2021,year,CH,country,all,8,8778099,0.09,NA,falling,-10,-0.12,-57.1,37.2
 cases,2022,year,CH,country,all,18,8855062,0.2,NA,stagnant,10,0.11,122.2,30.4
 cases,2023,year,CH,country,all,34,9002273,0.38,NA,rising,16,0.18,90,24.6
 cases,2024,year,CH,country,all,36,9091915,0.4,NA,rising,2,0.02,5.3,22.8
-cases,2025,year,CH,country,all,40,9127125,0.44,NA,stagnant,4,0.04,10,27.2
+cases,2025,year,CH,country,all,40,9168011,0.44,NA,stagnant,4,0.04,10,27.2

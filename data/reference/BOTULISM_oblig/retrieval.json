@@ -2,9 +2,9 @@
   "dataset_id": "BOTULISM_oblig",
   "csv_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/BOTULISM_oblig/csv",
   "metadata_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/BOTULISM_oblig/metadata",
-  "retrieved_at_utc": "2026-10-08T09:01:01.576066+00:00",
-  "csv_sha256": "132c4756849ded7e187d60bb80ebdda5b6ddbdcefaa33776338a2f24c5e78f07",
-  "metadata_sha256": "802cd69f08302907f9ac3d8ec8b186349676e95d2a2e80f1a546d37ea27540b0",
+  "retrieved_at_utc": "2026-11-05T03:38:19.447405+00:00",
+  "csv_sha256": "689d9c4c16566f147ee75e4edc2d9b436668f252817dc5b392cf9c5511eb1617",
+  "metadata_sha256": "cb52e09f9d22cadf32d0deebd8c14e7a6a21cb010a839e5f2e9715010bbc6fe8",
   "row_count": 26,
   "columns": [
     "valueCategory",

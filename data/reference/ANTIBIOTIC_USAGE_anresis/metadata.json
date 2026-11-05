@@ -2,8 +2,8 @@
   "metaVariables": {
     "topic": "antibiotic_usage",
     "source": "swiss_center_for_antibiotic_resistance",
-    "publishingDate": "2026-10-07",
-    "sourceDate": "2026-10-06",
+    "publishingDate": "2026-11-04",
+    "sourceDate": "2026-11-03",
     "publicationFrequency": {
       "frequency": "monthly",
       "frequencyDescription": "First Wednesday after day 1 of every month. The exact weekday can vary due to public holidays. Because of reporting delays, there is a gap of 3 months between the publication date and published data."
@@ -95,7 +95,7 @@
       "description": "Population number within the given temporal unit and grouping.",
       "valueSetOrRange": [
         341616,
-        9127125
+        9168011
       ],
       "nullValue": "NA",
       "type": "double"

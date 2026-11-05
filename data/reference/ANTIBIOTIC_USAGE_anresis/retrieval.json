@@ -2,9 +2,9 @@
   "dataset_id": "ANTIBIOTIC_USAGE_anresis",
   "csv_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/ANTIBIOTIC_USAGE_anresis/csv",
   "metadata_source_url": "https://api.idd.bag.admin.ch/api/v1/export/latest/ANTIBIOTIC_USAGE_anresis/metadata",
-  "retrieved_at_utc": "2026-10-08T09:01:01.314395+00:00",
-  "csv_sha256": "82b63bb663ab01c298843a5a75d4b30f6644af32c6939e00920ba71c76d92061",
-  "metadata_sha256": "b66f0ad3b3f26371e35cd71ca357c836a8795fed6eb7e34d38c9bfde3f653b87",
+  "retrieved_at_utc": "2026-11-05T03:38:19.127319+00:00",
+  "csv_sha256": "48b477208cafdc2bb3bd9937e2e10dc9c4984b5b5405b1056358e7e319045ca7",
+  "metadata_sha256": "b5881f0f928a46ce226af00986994786f9d7778f50a80676ad195d0f67350273",
   "row_count": 352,
   "columns": [
     "valueCategory",
