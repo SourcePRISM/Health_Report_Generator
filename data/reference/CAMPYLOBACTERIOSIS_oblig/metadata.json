@@ -2,8 +2,8 @@
   "metaVariables": {
     "topic": "campylobacteriosis",
     "source": "mandatory_reporting_system",
-    "publishingDate": "2026-10-14",
-    "sourceDate": "2026-10-13",
+    "publishingDate": "2026-11-11",
+    "sourceDate": "2026-11-10",
     "publicationFrequency": {
       "frequency": "monthly",
       "frequencyDescription": "First Wednesday after day 7 of every month. The exact weekday can vary due to public holidays."
@@ -132,7 +132,7 @@
       "description": "Cumulative sum of the property 'value' within a year.",
       "valueSetOrRange": [
         524,
-        8716
+        8755
       ],
       "nullValue": "NA",
       "type": "double"
@@ -150,7 +150,7 @@
       "description": "Population number within the given temporal unit and grouping.",
       "valueSetOrRange": [
         15778,
-        9127125
+        9168011
       ],
       "nullValue": "NA",
       "type": "integer"
