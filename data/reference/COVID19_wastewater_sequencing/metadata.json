@@ -2,8 +2,8 @@
   "metaVariables": {
     "topic": "wastewater_sequencing",
     "source": "swiss_federal_institute_of_technology",
-    "publishingDate": "2026-11-11",
-    "sourceDate": "2026-11-10",
+    "publishingDate": "2026-11-18",
+    "sourceDate": "2026-11-17",
     "publicationFrequency": {
       "frequency": "weekly",
       "frequencyDescription": "-"
@@ -39,9 +39,9 @@
       "typeValues": {
         "canton": {
           "valueSet": [
-            "GE",
             "BS",
             "GR",
+            "GE",
             "BE",
             "TI",
             "ZH"
@@ -58,9 +58,9 @@
       "typeValues": {
         "wastewater_treatment_plant": {
           "valueSet": [
-            "aire",
             "basel",
             "chur",
+            "aire",
             "laupen",
             "lugano",
             "werdhoelzli"
@@ -89,6 +89,8 @@
         "KP.3",
         "LP.8",
         "NB.1.8.1",
+        "PJ.2.1",
+        "ST.1",
         "XBB.1.16",
         "XBB.1.5",
         "XBB.1.9",

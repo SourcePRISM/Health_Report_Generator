@@ -2,8 +2,8 @@
   "metaVariables": {
     "topic": "tularemia",
     "source": "mandatory_reporting_system",
-    "publishingDate": "2026-10-21",
-    "sourceDate": "2026-10-20",
+    "publishingDate": "2026-11-18",
+    "sourceDate": "2026-11-17",
     "publicationFrequency": {
       "frequency": "monthly",
       "frequencyDescription": "First Wednesday after day 14 of every month. The exact weekday can vary due to public holidays."
@@ -148,7 +148,7 @@
       "description": "Population number within the given temporal unit and grouping.",
       "valueSetOrRange": [
         15778,
-        9127125
+        9168011
       ],
       "nullValue": "NA",
       "type": "integer"
@@ -193,7 +193,7 @@
       "description": "Percentage difference in the metric 'incValue' comparing the current year to the last one.",
       "valueSetOrRange": [
         -47.9,
-        130
+        131.4
       ],
       "nullValue": "NA",
       "type": "double"
@@ -201,7 +201,7 @@
     "valueMean5y": {
       "description": "Right-aligned, rolling 5-year average of the property 'value'.",
       "valueSetOrRange": [
-        63.2,
+        63.4,
         164.4
       ],
       "nullValue": "NA",

@@ -2,8 +2,8 @@
   "metaVariables": {
     "topic": "influenza-like_illness",
     "source": "sentinella_reporting_system",
-    "publishingDate": "2026-11-11",
-    "sourceDate": "2026-11-10",
+    "publishingDate": "2026-11-18",
+    "sourceDate": "2026-11-17",
     "publicationFrequency": {
       "frequency": "weekly",
       "frequencyDescription": "-"
